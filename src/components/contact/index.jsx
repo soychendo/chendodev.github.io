@@ -1,16 +1,11 @@
 import React, { useContext } from "react"
 import { useForm } from '@formspree/react';
-import { GlobalContext } from '@context/GlobalContext';
 import { getBrowser } from '@utils/check';
-import useMediaQuery from '@hooks/useMediaQuery';
 import Menu from "@components/menu";
 
 import TelegramImage from '@images/telegram.svg';
 
 const Contact = () => {
-
-  const { menuBtn } = useContext(GlobalContext);
-  const matches = useMediaQuery("(max-width: 992px)");
   const [state, handleSubmit] = useForm("xvoyyzey");
 
   if(state.succeeded) {
@@ -19,7 +14,7 @@ const Contact = () => {
 
   return(
     <div onLoad={getBrowser} className="container-menu">
-     <div style={{backgroundColor: menuBtn && matches ? "transparent" : null}} className="bartitle">
+     <div className="bartitle">
         <h1>Contacto</h1>
         <Menu />
       </div>
@@ -41,7 +36,7 @@ const Contact = () => {
          </div>
          <div className="col-md-12 pd-l">
             <div className="cont-form">
-               <form onSubmit={handleSubmit} action="includes/send.php" method="POST" id="form">
+               <form onSubmit={handleSubmit} method="POST" id="form">
                   <div className="form-control" >
                      <input type="text" spellCheck="false" id="name" name="name" placeholder="Nombre" autoComplete="off" required />
                   </div>

@@ -35,15 +35,3 @@
 .MenuBtn_burger::after {
   transform: translateY(10px);
 }
-/* ANIMATION */
-.MenuBtn.open .MenuBtn_burger {
-  transform: translateX(-50px);
-  background: transparent;
-  box-shadow: none;
-}
-.MenuBtn.open .MenuBtn_burger::before {
-  transform: rotate(45deg) translate(35px, -35px);
-}
-.MenuBtn.open .MenuBtn_burger::after {
-  transform: rotate(-45deg) translate(35px, 35px);
-}

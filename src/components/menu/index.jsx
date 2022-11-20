@@ -4,11 +4,11 @@ import useMediaQuery from '@hooks/useMediaQuery';
 
 const Menu = () => {
 
-  const { setMenu, menuBtn } = useContext(GlobalContext);
+  const { setMenu } = useContext(GlobalContext);
   const matches = useMediaQuery("(max-width: 992px)");
 
  return (
-  <div onClick={matches ? setMenu : null} id="Menu" className={menuBtn && matches ? "MenuBtn open" : "MenuBtn"}>
+  <div onClick={matches ? setMenu : null} id="Menu" className="MenuBtn">
     <div className="MenuBtn_burger"></div>
   </div>
  );

@@ -1,30 +1,28 @@
-import React from "react"
+import React from "react";
 import { Link } from 'react-router-dom';
 import Menu from "@components/menu";
 import Mapa from '@images/mapa.png';
-import init from '@utils/fns-home';
 
-
-const Home = () => {
+const NotFound = () => {
 
   return(
-    <main onLoad={init} className="container-menu">
+
+    <main className="container-menu">
       <div className="map"><img src={Mapa} alt="Background Image - @chendodev" /></div>
       <div className="bartitle">
-        <h1>Home</h1>
+      <h1>¡Ups!</h1>
         <Menu />
       </div>
       <div className="grid-menu mb-4">
         <div className="col-md-6 pd-l">
           <div className="col-content">
             <div className="container-type"><br />
-              <span className="hello">Hola,</span>
-              <small>mi nombre es Chendo</small>
-              <h2>I Am<span className="txt-type" data-wait="3000" data-words='["Developer", "Designer", "Freelancer"]'></span></h2>
-              <p>Con más de 10 años de experiencia, puedo crear, diseñar y desarrollar tu presencia online, llevando tu proyecto al siguiente nivel.</p>
+              <span className="hello">Error 404</span>
+              <small>Página no encontrada</small>
+              <h2>No te preocupes!</h2>
+              <p>Tal vez no fue tu intención llegar acá, o tal vez sea el destino 😏, pero aprovechando el bug 😊, puedes seguirme en todas las redes, o ir a la página de inicio.</p>
               <div className="btn_home">
-                <Link to="/portfolio" className="btn btn-chendo btn-block mb-4">Portafolio</Link>
-                <a href="https://enchufevirtual.com" target="_blank" className="btn btn-chendo btn-ev btn-block mb-4">Ev</a>
+                <Link to="/" className="btn error-404 btn-chendo btn-ev btn-block mb-4">Home</Link>
               </div>
             </div>
             </div>
@@ -64,8 +62,8 @@ const Home = () => {
           </div>
       </div>
     </main>
+
   );
 }
 
-export default Home;
-
+export default NotFound;

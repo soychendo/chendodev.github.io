@@ -3,19 +3,19 @@ import { DataBase } from 'database/database.model';
 
 export const database: DataBase[] = [
   {
-    title: "Enchufe Virtual",
-    description: "Espacio creado para compartir proyectos de código abierto, llevando el conocimiento a otro nivel.",
-    image: "enchufevirtual.jpg",
-    source: "https://github.com/orgs/enchufevirtual/repositories",
-    demo: "https://enchufevirtual.com/",
-    id: 1
-  },
-  {
     title: "Audio Seven",
     description: "Reproductor de Audio creado en Html, Css y JavaScript, sencillo y elegante.",
     image: "audioseven.jpg",
     source: "https://github.com/chendodev/audioseven",
     demo: "https://audioseven.vercel.app/",
+    id: 1
+  },
+  {
+    title: "Enchufe Virtual",
+    description: "Espacio creado para compartir proyectos de código abierto, llevando el conocimiento a otro nivel.",
+    image: "enchufevirtual.jpg",
+    source: "https://github.com/orgs/enchufevirtual/repositories",
+    demo: "https://enchufevirtual.com/",
     id: 2
   },
   {

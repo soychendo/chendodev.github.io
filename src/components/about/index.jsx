@@ -1,16 +1,12 @@
-import React, { useContext } from "react"
-import { GlobalContext } from '@context/GlobalContext';
-import useMediaQuery from '@hooks/useMediaQuery';
+import React from "react"
+
 import Menu from "@components/menu";
 
 const About = () => {
 
-  const { menuBtn } = useContext(GlobalContext);
-  const matches = useMediaQuery("(max-width: 992px)");
-
   return(
   <main className="container-menu">
-    <div style={{backgroundColor: menuBtn && matches ? "transparent" : null}} className="bartitle">
+    <div className="bartitle">
         <h1>Sobre mi</h1>
         <Menu />
     </div>

@@ -9,10 +9,8 @@ const Header = () => {
   const { menuBtn, setMenuBtn } = useContext(GlobalContext);
   const matches = useMediaQuery("(max-width: 992px)");
   const [date, setDate] = useState();
-
   // Get Year
   const getYear = () => setDate(new Date().getFullYear());
-
   // Dinamic Link Transform
   const setStyles = () => {
     setMenuBtn(false);
@@ -21,7 +19,6 @@ const Header = () => {
   const color = {
     color: "#42b883"
   }
-
   // Render
   useEffect(() => {
     getYear();
