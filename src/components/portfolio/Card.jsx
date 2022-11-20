@@ -13,11 +13,7 @@ const Card = ({data, id}) => {
   const handleMouseOver = () => ( setOver(true) );
   const handleMouseOut = () => ( setOver(false) );
   // Click OnCard
-  // const onclickCard = () => {
-  //   database.forEach(data => (id == data.id ? window.open(data.demo, "_blank") : null));
-  // }
-  const fns = () => {
-    setClik(false);
+  const onclickCard = () => {
     database.forEach(data => (id == data.id ? window.open(data.demo, "_blank") : null));
   }
   const styles = {
@@ -26,16 +22,15 @@ const Card = ({data, id}) => {
   }
 
   return(
-    <div className="col-md-4 col-lg-4 mb-4">
+    <div onClick={onclickCard} className="col-md-4 col-lg-4 mb-4">
       <div
       onTouchStart={handleMouseDown}
-      onTouchEnd={fns}
+      onTouchEnd={handleMouseAll}
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseAll}
       onMouseLeave={handleMouseAll}
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
-      onClick={fns}
       style={{transform: click ? styles.transform : over ? styles.transformOver: "none"}}
       className="card"
       id={data.id}
