@@ -1,40 +1,57 @@
-import React from "react"
+import React, { useContext } from "react"
+import { useForm } from '@formspree/react';
+import { GlobalContext } from '@context/GlobalContext';
+import { getBrowser } from '@utils/check';
+import useMediaQuery from '@hooks/useMediaQuery';
+import Menu from "@components/menu";
+
+import TelegramImage from '@images/telegram.svg';
 
 const Contact = () => {
+
+  const { menuBtn } = useContext(GlobalContext);
+  const matches = useMediaQuery("(max-width: 992px)");
+  const [state, handleSubmit] = useForm("xvoyyzey");
+
+  if(state.succeeded) {
+    return window.location.href = "/contact";
+  }
+
   return(
-    <div className="container-menu">
-     <div className="bartitle">
+    <div onLoad={getBrowser} className="container-menu">
+     <div style={{backgroundColor: menuBtn && matches ? "transparent" : null}} className="bartitle">
         <h1>Contacto</h1>
-     </div>
+        <Menu />
+      </div>
      <div className="grid-menu">
-         <div className="col-md-12">
+         <div className="col-md-12 pd-l">
             <div className="container-contact">
                <span>Tienes un proyecto en mente, y no sabes por dónde empezar?<br />
                Puedes escribirme directamente:<br /></span><br />
                <span className="correo"><i className="fas fa-envelope icono"></i> chendoec@live.com<br /></span>
                <div className="cont-text">
                   <div className="cont-svg">
-                     <img src="src/image/telegram.svg" className="img-svg" alt="svg-telegram" />
+                     <img src={TelegramImage} className="img-svg" alt="svg-telegram" />
                   </div>
-                  <a href="https://t.me/chendoec" target="_blank">@chendoec</a>
+                  <a href="https://t.me/chendodev" target="_blank">@chendodev</a>
                </div><br />
                <p>Sientete libre de preguntar cuanto necesites. Te contestaré lo antes posible.<br />
                <span>(eso suele ser en un plazo de entre 24-48 horas laborables!)</span></p>
             </div>
          </div>
-         <div className="col-md-12">
+         <div className="col-md-12 pd-l">
             <div className="cont-form">
-               <form action="includes/send.php" method="POST" id="form">
+               <form onSubmit={handleSubmit} action="includes/send.php" method="POST" id="form">
                   <div className="form-control" >
-                     <input type="text" spellcheck="false" id="name" name="name" placeholder="Nombre" autocomplete="off" required />
+                     <input type="text" spellCheck="false" id="name" name="name" placeholder="Nombre" autoComplete="off" required />
                   </div>
                   <div className="form-control" >
-                     <input type="email" spellcheck="false" id="email" name="email" placeholder="Email" autocomplete="off" required />
+                     <input type="email" spellCheck="false" id="email" name="email" placeholder="Email" autoComplete="off" required />
                   </div>
-                  <textarea name="message" spellcheck="false" id="message" placeholder="Mensaje" required></textarea>
+                  <textarea name="message" spellCheck="false" id="message" placeholder="Mensaje" required></textarea>
                   <div className="messageAndSubmit">
                      <small></small>
-                     <button type="submit" className="btn btn-chendo btn-block mb-4">Enviar</button>
+                     <button type="submit" disabled={state.submitting} className="btn btn-chendo btn-block mb-4">Enviar</button>
                   </div>
                </form>
             </div>

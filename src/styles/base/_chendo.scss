@@ -1,0 +1,256 @@
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+body {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+}
+::selection {
+    background: $color;
+    color: #fff;
+}
+::-moz-selection {
+    background: $color;
+    color: #fff;
+}
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 0.5rem;
+    font-family: inherit;
+    word-break: break-all;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+}
+h2 {
+    display: block;
+    font-size: 1.2em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    font-weight: 700;
+}
+a {
+    text-decoration: none;
+}
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+img {
+    width: 100%;
+    border-style: none;
+}
+.cont-svg {
+    background-color: $color;
+    display: flex;
+    max-width: fit-content;
+}
+.img-svg {
+    width: 100%;
+    height: 100%;
+    border-style: none;
+}
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+    display: block;
+}
+.col-lg-4,
+.col-md-12,
+.col-md-4,
+.col-md-6,
+.col-md-8 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+}
+div {
+    display: block;
+}
+.mb-4,
+.my-4 {
+    margin-bottom: 1rem !important;
+}
+.pt-4 {
+    margin-top: 3rem !important;
+}
+.pall {
+    padding: 3rem !important;
+}
+@media (min-width: 768px) {
+    .col-md-6 {
+        -ms-flex: 0 0 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+@media (min-width: 768px) {
+    .col-md-8 {
+        -ms-flex: 0 0 66.666667%;
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+}
+@media (min-width: 768px) {
+    .col-md-8 {
+        -ms-flex: 0 0 66.666667%;
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+}
+@media (min-width: 768px) {
+    .col-content {
+        width: 100%;
+        height: 100%;
+        padding: 1em;
+    }
+}
+@media (min-width: 480px) {
+  .col-md-4 {
+      -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+      max-width: 50%;
+  }
+}
+@media (min-width: 768px) {
+  .col-md-4 {
+      -ms-flex: 0 0 33.333333%;
+      flex: 0 0 33.333333%;
+      max-width: 33.333333%;
+  }
+}
+@media (min-width: 992px) {
+  .col-lg-4 {
+      -ms-flex: 0 0 25%;
+      flex: 0 0 25%;
+      max-width: 25%;
+  }
+}
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    background-color: $color;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all .2s ease-out;
+    user-select: none;
+    cursor: pointer;
+    height: 100%;
+}
+.card-body {
+    color: $color-three;
+    text-align: center;
+    border: none;
+    border-radius: 0;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+.card-body h2 {
+  color: $color-a;
+}
+.card-body p {
+  font-size: 12px;
+}
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 20px;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.btn-block {
+    display: block;
+    width: 100%;
+}
+.pos-btn {
+    position: relative;
+    z-index: 9999;
+}
+.menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger {
+    width: 40px;
+    height: 2.5px;
+    margin-top: 0.7em;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(251, 137, 57, 0.2);
+    transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::after,
+.menu-btn__burger::before {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2.5px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(251, 137, 57, 0.2);
+    transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::before {
+    transform: translateY(-13px);
+}
+.open {
+    visibility: visible;
+}

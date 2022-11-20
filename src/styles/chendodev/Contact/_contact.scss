@@ -1,0 +1,135 @@
+/*<----------Form Contact------------>*/
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    box-shadow: 0 0 0 30px rgb(19, 19, 19) inset !important; }
+input:-webkit-autofill { -webkit-text-fill-color: rgb(255, 255, 255);}
+/* color */
+@media (min-width: 768px) {
+    .container-contact, .cont-form {
+        padding: 3rem;
+    }
+}
+/*----content form----*/
+/*<------Contact----->*/
+@media (max-width: 575px) {
+  .container-contact {
+      margin: .1em;
+      padding: .1em;
+  }
+}
+.container-contact span {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: $color-a;
+}
+.container-contact span:last-child {
+  font-size: 1rem;
+  color: $color-f;
+}
+.container-contact .correo {
+  font-size: 1em;
+  color: $color-a;
+  font-weight: normal;
+}
+.container-contact i {
+  padding: .7em;
+  font-size: 1em;
+  color: $color-three;
+}
+.container-contact p {
+  font-size: 1rem;
+  color: $color-a;
+}
+.cont-text {
+  display: flex;
+  align-items: center;
+}
+.cont-text a {
+  color: $color-a;
+  font-size: 1em;
+  padding: .3em;
+}
+
+.cont-svg {
+  border-radius: 50%;
+  padding: .03em;
+  margin-top: .5em;
+}
+.cont-svg img {
+ width: 1.3rem;
+ height: 1.3rem;
+ margin: .54em;
+}
+.cont-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+#form {
+    display: flex;
+    flex-direction: column;
+}
+input, textarea {
+    font-size: 1.5em;
+    font-family: $font-second;
+    padding: .5em 0 .5em 0;
+    margin: .1em;
+    color: $color-three;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px dotted $color;
+}
+textarea {
+    max-width: 100%;
+    min-width: 100%;
+    overflow: hidden;
+    resize: none;
+}
+.cont-form .btn {
+    width: 7rem;
+    align-self: flex-end;
+    cursor: pointer;
+    margin: .7em .1em 0;
+}
+/*<-------Form Control-------->*/
+.form-control {
+	position: relative;
+}
+.form-control input {
+	outline: 1px solid $body;
+    outline: none;
+	width: 100%;
+}
+
+.form-control.success input {
+	border-color: $success;
+}
+
+.form-control.error input {
+	border-color: $error;
+}
+.form-control small {
+	color: $error;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	top: .01em;
+	visibility: hidden;
+}
+.form-control.error small {
+	visibility: visible;
+}
+.messageAndSubmit {
+    display: flex;
+    justify-content: space-between;
+}
+.messageAndSubmit small {
+    font-size: 1em;
+    color: $error;
+    padding: 1em 0 0 0;
+}

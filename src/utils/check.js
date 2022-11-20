@@ -1,20 +1,21 @@
 /*-----------------------------------------------------------------------------------
 
-    Name: Chendo
-    Theme URI: @chendoio
-    Description: Web Site - Portfolio - Chendo
-    Author: @chendoio - chendo : developer and web designer
-    Author URI: http://chendo.io
-    Github: https://github.com/chendoio
-    Youtube: https://youtube.com/chendoio
+    Name: Chendo Dev
+    Theme URI: @chendodev
+    Description: Chendo Dev - Web Site
+    Author: @chendodev - chendo | developer && web designer
+    Author URI: https://facebook.com/chendodev
+    Github: https://github.com/chendodev
+    Youtube: https://youtube.com/@chendodev
 
 -----------------------------------------------------------------------------------*/
-// check 
-getBrowser();
-function getBrowser() {
+// check
+const getBrowser = () => {
     let ieCheck = /Edg/.test(navigator.userAgent);
-  
+
        ieCheck
-       ? document.querySelectorAll('input').forEach( input => input.setAttribute('autocomplete', 'nope'))
+       ? document.querySelectorAll('input').forEach( input => input.setAttribute('autoComplete', 'nope'))
        : null;
 }
+
+export { getBrowser };

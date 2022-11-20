@@ -1,7 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const CopyPlugin = require('copy-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: './src/index.jsx',
@@ -13,15 +13,16 @@ module.exports = {
     },
     mode: 'development',
     resolve: {
-        extensions: ['.jsx', '.js'],
+        extensions: ['.tsx', '.jsx', '.ts', '.js'],
         alias: {
             '@styles': path.resolve(__dirname, './src/styles/'),
             '@components': path.resolve(__dirname, './src/components/'),
-            '@images': path.resolve(__dirname, './public/image/'),
+            '@images': path.resolve(__dirname, './public/images/'),
             '@hooks': path.resolve(__dirname, './hooks/'),
             '@public': path.resolve(__dirname, './public/'),
             '@containers': path.resolve(__dirname, './src/containers/'),
             '@context': path.resolve(__dirname, './src/context/'),
+            '@utils': path.resolve(__dirname, './src/utils/'),
             'database': path.resolve(__dirname, './src/database/')
         }
     },
@@ -64,14 +65,14 @@ module.exports = {
             inject: 'body'
         }),
         new MiniCssExtractPlugin(),
-        // new CopyPlugin({
-        //     patterns: [
-        //         {
-        //             from: path.resolve(__dirname, "public", "assets"),
-        //             to: "assets"
-        //         }
-        //     ]
-        // })
+        new CopyPlugin({
+            patterns: [
+                {
+                    from: path.resolve(__dirname, "public", "images"),
+                    to: "images"
+                }
+            ]
+        })
     ],
     devServer: {
         historyApiFallback: true

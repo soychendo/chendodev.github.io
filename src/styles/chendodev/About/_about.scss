@@ -1,0 +1,47 @@
+/*Developer and Design - About Chendo ------->*/
+.development {
+  display: flex;
+  flex-direction: column;
+}
+li {
+  color: $color-gray;
+}
+.line {
+  border: 1px dotted $color;
+  margin: 1em;
+  width: 100%;
+}
+.icono {
+  background-color: $color;
+  font-size: 1.5em;
+  border-radius: 50%;
+  padding: .5em;
+}
+.skill__separate {
+  display: flex;
+  align-items: center;
+  margin: 0 3em 0 3em;
+}
+.skills {
+  margin-left: 7em;
+}
+@media (max-width: 320px) {
+  .skills {
+      margin-left: 5em;
+  }
+}
+.patterns-techniques {
+  margin: 0 3em 0 3em;
+}
+.design {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 2.5em;
+  margin-top: 3rem!important;
+}
+.skill__design {
+  margin-left: 3em ;
+}
+/*<---------------------------------->*/
+

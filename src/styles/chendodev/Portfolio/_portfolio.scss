@@ -1,0 +1,42 @@
+/*<-------Portfolio------------>*/
+/*justificar texto*/
+@supports ((-webkit-hyphens:auto) or (hyphens:auto)) {
+	.col-md-4 p {
+		text-align: justify;
+		-webkit-hyphens: auto; /* A día de hoy aún es necesario el prefijo para soportar a Safari */
+		hyphens: auto;
+	}
+}
+.card-body p {
+    text-align: center;
+}
+.card-body .button_portfolio {
+    display: flex;
+}
+.card-body .button_portfolio a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-body .button_portfolio a:first-child {
+    margin-right: 8px;
+}
+.card-body .button_portfolio a:last-child {
+    margin-right: 0;
+}
+.card:hover {
+    transform: scale(1.03,1.03);
+    border: none;
+}
+.source-code {
+    pointer-events: all;
+}
+@media (max-width: 575px) {
+    .card:hover {
+        pointer-events:none;
+        touch-action: none;
+    }
+}
+.card-img-top {
+    border-radius: 0;
+}

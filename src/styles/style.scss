@@ -1,3 +1,10 @@
 // global var and customs
-@import '@styles/chendo';
-@import '@styles/Global';
+@import '@styles/base/var';
+@import '@styles/base/chendo';
+@import '@styles/chendodev/chendodev';
+@import '@styles/chendodev/Header/header';
+@import '@styles/chendodev/Menu/menu';
+@import '@styles/chendodev/Home/home';
+@import '@styles/chendodev/About/about';
+@import '@styles/chendodev/Contact/contact';
+@import '@styles/chendodev/Portfolio/portfolio';

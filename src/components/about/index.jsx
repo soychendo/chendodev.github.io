@@ -1,13 +1,21 @@
-import React from "react"
+import React, { useContext } from "react"
+import { GlobalContext } from '@context/GlobalContext';
+import useMediaQuery from '@hooks/useMediaQuery';
+import Menu from "@components/menu";
 
 const About = () => {
+
+  const { menuBtn } = useContext(GlobalContext);
+  const matches = useMediaQuery("(max-width: 992px)");
+
   return(
   <main className="container-menu">
-    <div className="bartitle">
+    <div style={{backgroundColor: menuBtn && matches ? "transparent" : null}} className="bartitle">
         <h1>Sobre mi</h1>
+        <Menu />
     </div>
     <div className="grid-menu mb-4">
-      <div className="col-md-6">
+      <div className="col-md-6 pd-l">
           <div className="col-content">
             <span>Hola!</span>
             <p>Soy chendo, Diseñador Gráfico, Desarrollador Web, Motivador & Especialista en Presencia Online.</p>
@@ -16,18 +24,18 @@ const About = () => {
             <p><i>"Cuando algo realmente te apasiona. encuentras la manera de llevarlo acabo, sin importar cuanto tiempo te tarde."</i></p>
           </div>
       </div>
-      <div className="col-md-6">
-          <div className="col-content">
-            <span>Quien soy...</span>
-            <p>Mi nombre real es Jorge, pero todos me conocen como Chendo… Tengo 32 años. Nací el 19 de enero de 1990 en la mitad del mundo, Ecuador.</p>
-            <p>Mis colores favoritos  son: rojo y negro. Número de la suerte, 7. Signo Capricornio.</p>
-            <p>Sin duda alguna, si hay algo que disfruto tanto. es ponerme el casco, subirme a mi moto y olvidarme de los problemas.
-                Viajar, conocer a buenas personas, y poner en papel lo que siento.</p>
-            <p>La música, es una de mis pasiones favoritas. Ella me inspira, con ella vuelvo a vivir. Podría decir que ella vive conmigo desde que tengo memoria, o tal vés, mucho antes.</p>
-          </div>
+      <div className="col-md-6 pd-l">
+        <div className="col-content">
+          <span>Quien soy...</span>
+          <p>Mi nombre real es Jorge, pero todos me conocen como Chendo… Tengo 32 años. Nací el 19 de enero de 1990 en la mitad del mundo, Ecuador.</p>
+          <p>Mis colores favoritos  son: rojo y negro. Número de la suerte, 7. Signo Capricornio.</p>
+          <p>Sin duda alguna, si hay algo que disfruto tanto. es ponerme el casco, subirme a mi moto y olvidarme de los problemas.
+              Viajar, conocer a buenas personas, y poner en papel lo que siento.</p>
+          <p>La música, es una de mis pasiones favoritas. Ella me inspira, con ella vuelvo a vivir. Podría decir que ella vive conmigo desde que tengo memoria, o tal vés, mucho antes.</p>
+        </div>
       </div>
       <span className="line"></span>
-      <div className="col-md-6">
+      <div className="col-md-6 pd-l">
         <div className="development pt-4">
           <span>Habilidades y Técnicas</span>
           <span><i className="fa fa-wrench icono"></i> Desarrollo</span>
@@ -59,7 +67,7 @@ const About = () => {
           </ul>
         </div>
       </div>
-      <div className="col-md-6 mb-4">
+      <div className="col-md-6 pd-l mb-4">
           <div className="design pt-4">
             <span><i className="fa fa-palette icono"></i> Diseño</span>
             <span>Herramientas:</span>
