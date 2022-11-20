@@ -37,7 +37,7 @@ const Card = ({data, id}) => {
       className="card"
       id={data.id}
       >
-        <img src={`images/${data.image}`} className="card-img-top" alt={data.title} />
+        <img src={`assets/${data.image}`} className="card-img-top" alt={data.title} />
         <div className="card-body">
           <h2>{data.title}</h2>
           <p>{data.description}</p>
