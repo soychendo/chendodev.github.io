@@ -1,7 +1,7 @@
 {
   "name": "chendo.dev",
   "version": "1.7.9",
-  "homepage": "https://chendodev.github.io",
+  "homepage": "https://chendodev.github.io/chendodev",
   "description": "Developer && Web Designer ",
   "main": "./src/index.jsx",
   "scripts": {
@@ -24,6 +24,7 @@
     "@formspree/react": "^2.4.1",
     "babel-loader": "^9.1.0",
     "css-loader": "^6.7.2",
+    "gh-pages": "^4.0.0",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.7.0",
