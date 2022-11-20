@@ -24,7 +24,7 @@ const Home = () => {
               <p>Con más de 10 años de experiencia, puedo crear, diseñar y desarrollar tu presencia online, llevando tu proyecto al siguiente nivel.</p>
               <div className="btn_home">
                 <Link to="/portfolio" className="btn btn-chendo btn-block mb-4">Portafolio</Link>
-                <a href="https://enchufevirtual.com" target="_blank" className="btn btn-chendo btn-ev btn-block mb-4">Ev</a>
+                <a href="https://enchufevirtual.com" aria-label="Enchufe Virtual" target="_blank" className="btn btn-chendo btn-ev btn-block mb-4">Ev</a>
               </div>
             </div>
             </div>
@@ -34,29 +34,29 @@ const Home = () => {
               <div className="content__img">
                 <div className="content-top-icon">
                   <div className="cirdown">
-                      <a href="https://linkedin.com/in/chendodev" target="_blank"><i className="fab fa-linkedin-in icono"></i></a>
+                      <a href="https://linkedin.com/in/chendodev" aria-label="linkedin" target="_blank"><i className="fab fa-linkedin-in icono"></i></a>
                   </div>
                   <div className="cirdown">
-                      <a href="https://behance.net/chendo" target="_blank"><i className="fab fa-behance icono"></i></a>
+                      <a href="https://behance.net/chendo" aria-label="behance" target="_blank"><i className="fab fa-behance icono"></i></a>
                   </div>
                 </div>
                 <div className="content-med-icon">
                   <div className="cirdown">
-                      <a href="https://twitter.com/chendodev" target="_blank"><i className="fab fa-twitter icono"></i></a>
+                      <a href="https://twitter.com/chendodev" aria-label="twitter" target="_blank"><i className="fab fa-twitter icono"></i></a>
                   </div>
                   <div className="cirdown">
-                      <a href="https://github.com/chendodev" target="_blank"><i className="fab fa-github-alt icono"></i></a>
+                      <a href="https://github.com/chendodev" aria-label="github" target="_blank"><i className="fab fa-github-alt icono"></i></a>
                   </div>
                   <div className="cirdown">
-                      <a href="https://facebook.com/enchufevirtual" target="_blank"><i className="fab fa-facebook-f icono"></i></a>
+                      <a href="https://facebook.com/enchufevirtual" aria-label="facebook" target="_blank"><i className="fab fa-facebook-f icono"></i></a>
                   </div>
                 </div>
                 <div className="content-bottom-icon mb-4">
                   <div className="cirdown">
-                      <a href="https://tiktok.com/@chendodev" target="_blank"><i className="fab fa-tiktok icono"></i></a>
+                      <a href="https://tiktok.com/@chendodev" aria-label="tiktok" target="_blank"><i className="fab fa-tiktok icono"></i></a>
                   </div>
                   <div className="cirdown">
-                      <a href="https://codepen.io/chendodev" target="_blank"><i className="fab fa-codepen icono"></i></a>
+                      <a href="https://codepen.io/chendodev" aria-label="codepen" target="_blank"><i className="fab fa-codepen icono"></i></a>
                   </div>
                 </div>
                 </div>
