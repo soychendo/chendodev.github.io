@@ -72,6 +72,9 @@
   text-transform: lowercase;
   font-size: 1.4vmax;
 }
+.navigation .container .pulse .span {
+  color: $btn-page;
+}
 @media (max-width: 991px) {
   .navigation .container .row-cont .col-img span {
       display: none;

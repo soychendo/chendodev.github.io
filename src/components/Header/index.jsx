@@ -32,7 +32,7 @@ const Header = () => {
             <div className="col-img">
               <div className="pulse">
                 <a href="/"><img src={Master} alt="Master" /></a>
-                <span>@chendodev</span>
+                <span>@chendo<span className="span">dev</span></span>
               </div>
             </div>
             <div className="col-menu">
@@ -75,7 +75,7 @@ const Header = () => {
             <div className="menu-social">
               <a href="https://github.com/chendodev" aria-label="github" target="_blank"><i className="fab fa-github"></i></a>
               <a href="https://www.youtube.com/@chendodev" aria-label="youtube" target="_blank"><i className="fab fa-youtube"></i></a>
-              <a href="https://www.facebook.com/chendodev" aria-label="facebook" target="_blank"><i className="fab fa-facebook-f"></i></a>
+              <a href="https://www.facebook.com/chendoio" aria-label="facebook" target="_blank"><i className="fab fa-facebook-f"></i></a>
               <a href="https://www.instagram.com/chendodev" aria-label="instagram" target="_blank"><i className="fab fa-instagram"></i></a>
               <footer>Copyright @ {date}</footer>
             </div>
