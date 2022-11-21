@@ -32,7 +32,8 @@ const Header = () => {
             <div className="col-img">
               <div className="pulse">
                 <a href="/"><img src={Master} alt="Master" /></a>
-                <span>@chendo<span className="span">dev</span></span>
+                <span>chendo</span>
+                <span className="span">@chendodev</span>
               </div>
             </div>
             <div className="col-menu">

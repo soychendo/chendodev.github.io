@@ -67,13 +67,16 @@
   justify-content: center;
 }
 .navigation .container .pulse span {
-  color: $color-text;
+  color: $color-a;
   font-family: $font-first;
   text-transform: lowercase;
-  font-size: 1.4vmax;
+  font-size: 1.7vmax;
 }
 .navigation .container .pulse .span {
-  color: $btn-page;
+  color: $color-text;
+  font-size: .9vmax;
+  font-family: $font-second;
+  font-weight: normal;
 }
 @media (max-width: 991px) {
   .navigation .container .row-cont .col-img span {
