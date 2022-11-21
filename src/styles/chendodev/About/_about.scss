@@ -7,7 +7,7 @@ li {
   color: $color-gray;
 }
 .line {
-  border: 1px dotted $color;
+  border-bottom: 2px dotted $color;
   margin: 1em;
   width: 100%;
 }
