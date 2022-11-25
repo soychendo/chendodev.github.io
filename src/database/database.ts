@@ -22,8 +22,8 @@ export const database: DataBase[] = [
     title: "Windows",
     description: "Esta vesión de windows está creada en React, pero también tiene una versión en PHP.",
     image: "windows.jpg",
-    source: "https://github.com/chendodev/Oschen",
-    demo: "https://oschen.netlify.app/",
+    source: "https://github.com/chendodev/oschen",
+    demo: "https://chendo.dev/oschen",
     id: 3
   },
   {
