@@ -1,11 +1,14 @@
 
 import React, { useState, ReactNode } from 'react';
 import { GlobalContext } from "@context/GlobalContext";
+import { useForm } from '@formspree/react';
 
 const GlobalProvider: React.FC<{}> = ({children}: { children?: ReactNode }) => {
 
 const [menuBtn, setMenuBtn] = useState(false);
 const [input, setInput] = useState({name: "", email: "", message: ""});
+const [state, handleSubmit] = useForm("meqdyjel"); //!! Important: You must create an account in formspree.io and generate your ID.
+const [active, setActive] = useState(false);
 
 class Check {
 
@@ -62,14 +65,17 @@ let check = new Check(input.name, input.email, input.message);
     });
   }
 
-  const onSubmit = (e: { preventDefault: () => void; }): void => {
-    // we validate that everything is correct
-    if(!check.validate()) {
-      e.preventDefault();
-      check.validate();
+  const onSubmit = async (e: { preventDefault: () => void; }): Promise<void> =>  {
+    // Validating input data
+    e.preventDefault();
+    try {
+      !check.validate()
+      ? (check.validate(), setActive(false))
+      : (setInput({name: "", email: "", message: ""}), setActive(true));
+    } catch (error) {
+      console.log(error)
     }
   }
-
   const setMenu = (): void => {
     setMenuBtn(!menuBtn);
   }
@@ -78,10 +84,12 @@ let check = new Check(input.name, input.email, input.message);
     setMenu,
     menuBtn,
     input,
-    setInput,
+    state,
+    active,
+    onSubmit,
     setMenuBtn,
+    handleSubmit,
     handleChange,
-    onSubmit
   }
 
   return (

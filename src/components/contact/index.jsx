@@ -1,18 +1,13 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { GlobalContext } from "@context/GlobalContext";
-import { useForm } from '@formspree/react';
 import { getBrowser } from '@utils/check';
 import Menu from "@components/menu";
 
 import TelegramImage from '@images/telegram.svg';
 
 const Contact = () => {
-  const { input, setInput, onSubmit, handleChange } = useContext(GlobalContext);
-  const [state, handleSubmit] = useForm("xvoyyzey", {data: {validated: e => onSubmit(e)}});
+  const { input, active, onSubmit, handleChange, state, handleSubmit } = useContext(GlobalContext);
 
-  if(state.succeeded) {
-    setInput({ name: "", email: "", message: "" })
-  }
   const succes = "Tu mensaje ha sido enviado correctamente";
 
   return(
@@ -48,8 +43,12 @@ const Contact = () => {
                   </div>
                   <textarea name="message" spellCheck="false" id="message" value={input.message} onChange={handleChange} placeholder="Mensaje"></textarea>
                   <div className="messageAndSubmit">
-                     <small className={state.succeeded ? "succes" : null}>{state.succeeded ? <>{succes}</> : null}</small>
-                     <button type="submit" disabled={state.submitting} className="btn btn-chendo btn-block mb-4">Enviar</button>
+                     <small
+                      className={active ? "succes" : ""}
+                      >
+                        {active ? succes : ""}
+                      </small>
+                     <button onClick={e => onSubmit(e)} type="submit" disabled={state.submitting} className="btn btn-chendo btn-block mb-4">Enviar</button>
                   </div>
                </form>
             </div>
