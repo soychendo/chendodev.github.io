@@ -5,7 +5,7 @@ type ContextProps = {
   menuBtn: boolean;
   input: object;
   state: object;
-  active: boolean;
+  success: boolean;
   handleSubmit: unknown;
   setMenuBtn: () => boolean;
   onSubmit: (e: { preventDefault: () => void; }) => Promise<void>;

@@ -8,7 +8,7 @@ const GlobalProvider: React.FC<{}> = ({children}: { children?: ReactNode }) => {
 const [menuBtn, setMenuBtn] = useState(false);
 const [input, setInput] = useState({name: "", email: "", message: ""});
 const [state, handleSubmit] = useForm("meqdyjel"); //!! Important: You must create an account in formspree.io and generate your ID.
-const [active, setActive] = useState(false);
+const [success, setSuccess] = useState(false);
 
 class Check {
 
@@ -22,16 +22,16 @@ class Check {
     this.message = message;
   }
   public validate() {
-    const nameValue = input.name.trim();
-    const emailValue = input.email.trim();
-    const messageValue = input.message.trim();
+    const nameValue = this.name.trim();
+    const emailValue = this.email.trim();
+    const messageValue = this.message.trim();
     let result = true;
 
     if (!nameValue) {
       this.msgError('!Ingrese un Nombre¡');
       result = false;
     }
-    else if (!this.isEmail(emailValue) || emailValue === "") {
+    else if (!this.isEmail(emailValue) || !emailValue) {
         this.msgError('!Ingrese un email correcto¡');
         result = false;
     }
@@ -70,8 +70,8 @@ let check = new Check(input.name, input.email, input.message);
     e.preventDefault();
     try {
       !check.validate()
-      ? (check.validate(), setActive(false))
-      : (setInput({name: "", email: "", message: ""}), setActive(true));
+      ? (check.validate(), setSuccess(false))
+      : (setInput({name: "", email: "", message: ""}), setSuccess(true));
     } catch (error) {
       console.log(error)
     }
@@ -85,7 +85,7 @@ let check = new Check(input.name, input.email, input.message);
     menuBtn,
     input,
     state,
-    active,
+    success,
     onSubmit,
     setMenuBtn,
     handleSubmit,
@@ -93,7 +93,8 @@ let check = new Check(input.name, input.email, input.message);
   }
 
   return (
-    <GlobalContext.Provider value={valueContext}>{children}
+    <GlobalContext.Provider value={valueContext}>
+      {children}
     </GlobalContext.Provider>
   )
 }
