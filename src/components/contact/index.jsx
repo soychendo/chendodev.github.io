@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { GlobalContext } from "@context/GlobalContext";
 import { useForm } from '@formspree/react';
 import { getBrowser } from '@utils/check';
@@ -7,12 +7,13 @@ import Menu from "@components/menu";
 import TelegramImage from '@images/telegram.svg';
 
 const Contact = () => {
-  const { input, onSubmit, handleChange } = useContext(GlobalContext);
+  const { input, setInput, onSubmit, handleChange } = useContext(GlobalContext);
   const [state, handleSubmit] = useForm("xvoyyzey", {data: {validated: e => onSubmit(e)}});
 
   if(state.succeeded) {
-    return window.location.href = "/";
+    setInput({ name: "", email: "", message: "" })
   }
+  const succes = "Tu mensaje ha sido enviado correctamente";
 
   return(
     <div onLoad={getBrowser} className="container-menu">
@@ -47,7 +48,7 @@ const Contact = () => {
                   </div>
                   <textarea name="message" spellCheck="false" id="message" value={input.message} onChange={handleChange} placeholder="Mensaje"></textarea>
                   <div className="messageAndSubmit">
-                     <small></small>
+                     <small className={state.succeeded ? "succes" : null}>{state.succeeded ? <>{succes}</> : null}</small>
                      <button type="submit" disabled={state.submitting} className="btn btn-chendo btn-block mb-4">Enviar</button>
                   </div>
                </form>
