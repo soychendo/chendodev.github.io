@@ -1,4 +1,5 @@
-import React, { useContext } from "react"
+import React, { useContext } from "react";
+import { GlobalContext } from "@context/GlobalContext";
 import { useForm } from '@formspree/react';
 import { getBrowser } from '@utils/check';
 import Menu from "@components/menu";
@@ -6,10 +7,11 @@ import Menu from "@components/menu";
 import TelegramImage from '@images/telegram.svg';
 
 const Contact = () => {
-  const [state, handleSubmit] = useForm("xvoyyzey");
+  const { input, onSubmit, handleChange } = useContext(GlobalContext);
+  const [state, handleSubmit] = useForm("xvoyyzey", {data: {validated: e => onSubmit(e)}});
 
   if(state.succeeded) {
-    return window.location.href = "/contact";
+    return window.location.href = "/";
   }
 
   return(
@@ -38,12 +40,12 @@ const Contact = () => {
             <div className="cont-form">
                <form onSubmit={handleSubmit} method="POST" id="form">
                   <div className="form-control" >
-                     <input type="text" spellCheck="false" id="name" name="name" placeholder="Nombre" autoComplete="off" required />
+                     <input type="text" spellCheck="false" id="name" name="name" value={input.name} onChange={handleChange} placeholder="Nombre" autoComplete="off" />
                   </div>
                   <div className="form-control" >
-                     <input type="email" spellCheck="false" id="email" name="email" placeholder="Email" autoComplete="off" required />
+                     <input type="email" spellCheck="false" id="email" name="email" value={input.email} onChange={handleChange} placeholder="Email" autoComplete="off" />
                   </div>
-                  <textarea name="message" spellCheck="false" id="message" placeholder="Mensaje" required></textarea>
+                  <textarea name="message" spellCheck="false" id="message" value={input.message} onChange={handleChange} placeholder="Mensaje"></textarea>
                   <div className="messageAndSubmit">
                      <small></small>
                      <button type="submit" disabled={state.submitting} className="btn btn-chendo btn-block mb-4">Enviar</button>
