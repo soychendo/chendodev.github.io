@@ -25,11 +25,11 @@ const Home = () => {
               <div className="btn_home">
                 <Link to="/portfolio" className="btn btn-chendo btn-block mb-4">Portafolio</Link>
                 <a
-                  href="https://paypal.me/chendodev?country.x=EC&locale.x=es_XC"
+                  href="mailto:chendoec@live.com"
                   aria-label="Enchufe Virtual"
                   target="_blank"
                   className="btn btn-chendo btn-ev btn-block mb-4">
-                    Donar
+                    Contacto
                 </a>
               </div>
             </div>
