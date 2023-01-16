@@ -70,7 +70,7 @@ const Header = () => {
                 >
                   Portafolio
                   </NavLink>
-                <NavLink className="nav-link" to="#">Blog</NavLink>
+                <a className="nav-link" href="https://github.com/chendodev/chendodev.github.io" target="_blank">Code</a>
               </div>
             </div>
             <div className="menu-social">

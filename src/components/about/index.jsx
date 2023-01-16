@@ -1,14 +1,16 @@
 import React from "react"
+import useMediaQuery from '@hooks/useMediaQuery';
 
 import Menu from "@components/menu";
 
 const About = () => {
+  const matches = useMediaQuery("(max-width: 992px)");
 
   return(
   <main className="container-menu">
     <div className="bartitle">
         <h1>Sobre mi</h1>
-        <Menu />
+        {matches ? <Menu /> : null}
     </div>
     <div className="grid-menu mb-4">
       <div className="col-md-6 pd-l">

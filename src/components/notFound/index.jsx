@@ -2,8 +2,10 @@ import React from "react";
 import { Link } from 'react-router-dom';
 import Menu from "@components/menu";
 import Mapa from '@images/mapa.png';
+import useMediaQuery from '@hooks/useMediaQuery';
 
 const NotFound = () => {
+  const matches = useMediaQuery("(max-width: 992px)");
 
   return(
 
@@ -11,7 +13,7 @@ const NotFound = () => {
       <div className="map"><img src={Mapa} alt="Background Image - @chendodev" /></div>
       <div className="bartitle">
       <h1>¡Ups!</h1>
-        <Menu />
+      {matches ? <Menu /> : null}
       </div>
       <div className="grid-menu mb-4">
         <div className="col-md-6 pd-l">
