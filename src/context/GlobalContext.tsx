@@ -10,6 +10,7 @@ type ContextProps = {
   setMenuBtn: () => boolean;
   onSubmit: (e: { preventDefault: () => void; }) => Promise<void>;
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handleClose: () => void;
 }
 
 const GlobalContext = createContext<ContextProps>({} as ContextProps);

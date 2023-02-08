@@ -3,6 +3,7 @@ import { GlobalContext } from "@context/GlobalContext";
 import useMediaQuery from '@hooks/useMediaQuery';
 import { NavLink } from 'react-router-dom'
 import Master from "@images/master.jpg";
+import Close from "./close";
 
 const Header = () => {
 
@@ -28,6 +29,7 @@ const Header = () => {
     <header>
       <div className={menuBtn && matches ? "navigation transform" : "navigation"}>
         <div className="container">
+          { matches ? <Close /> : null }
           <div className="row-cont">
             <div className="col-img">
               <div className="pulse">

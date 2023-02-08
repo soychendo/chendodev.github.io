@@ -44,6 +44,15 @@
   width: 100%;
   height: 100vh;
 }
+#Close {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+}
+#Close img {
+  width: 28px;
+}
 .row-cont {
   display: flex;
   flex-direction: column;
