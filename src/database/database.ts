@@ -7,7 +7,7 @@ export const database: DataBase[] = [
     description: "Reproductor de Audio creado en Html, Css y JavaScript, sencillo y elegante.",
     image: "audioseven.jpg",
     source: "https://github.com/chendodev/audioseven",
-    demo: "https://audioseven.vercel.app/",
+    demo: "https://chendo.dev/audioseven/",
     id: 1
   },
   {
