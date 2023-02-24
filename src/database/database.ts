@@ -31,7 +31,7 @@ export const database: DataBase[] = [
     description: "Calculadora científica, construida con Html, Css y JavaScript, uso intermedio.",
     image: "chendocalc.jpg",
     source: "https://github.com/chendodev/chendoCalc",
-    demo: "https://chendo-calc.vercel.app/",
+    demo: "https://chendo.dev/chendocalc",
     id: 4
   },
   {
