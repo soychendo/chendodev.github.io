@@ -7,17 +7,17 @@ export const database: DataBase[] = [
       {
         name: "html",
         stack: "assets/html.png",
-        docs: "https://developer.mozilla.org/en-US/docs/Web/HTML"
+        docs: "https://developer.mozilla.org/en-US/docs/Web/HTML",
       },
       {
         name: "css",
         stack: "assets/css.png",
-        docs: "https://developer.mozilla.org/es/docs/Web/CSS"
+        docs: "https://developer.mozilla.org/es/docs/Web/CSS",
       },
       {
         name: "javascript",
         stack: "assets/javascript.png",
-        docs: "https://developer.mozilla.org/es/docs/Web/JavaScript"
+        docs: "https://developer.mozilla.org/es/docs/Web/JavaScript",
       }
     ],
     title: "Audio Seven",
@@ -32,17 +32,17 @@ export const database: DataBase[] = [
       {
         name: "html",
         stack: "assets/html.png",
-        docs: "https://developer.mozilla.org/en-US/docs/Web/HTML"
+        docs: "https://developer.mozilla.org/en-US/docs/Web/HTML",
       },
       {
         name: "sass",
         stack: "assets/sass.png",
-        docs: "https://sass-lang.com/documentation/"
+        docs: "https://sass-lang.com/documentation/",
       },
       {
         name: "reactjs",
         stack: "assets/reactjs.webp",
-        docs: "https://reactjs.org/docs/getting-started.html"
+        docs: "https://reactjs.org/docs/getting-started.html",
       }
     ],
     title: "Enchufe Virtual",

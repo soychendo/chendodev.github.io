@@ -1,18 +1,11 @@
-import React from "react"
-import { faker } from '@faker-js/faker';
+import React, {useContext} from "react"
 import Menu from "@components/menu";
 import useMediaQuery from '@hooks/useMediaQuery';
-
-import { database } from "database/database";
-import Card from "@components/portfolio/Card";
+import { CardContext } from "../../context/Card/CardContext"
 
 const Portfolio = () => {
   const matches = useMediaQuery("(max-width: 992px)");
-
-  const card = [];
-  database.forEach(data => {
-    card.push(<Card key={faker.datatype.uuid()} data={data} faker={faker} />)
-  });
+  const {data} = useContext(CardContext)
 
   return(
     <main className="container-menu">
@@ -21,7 +14,7 @@ const Portfolio = () => {
         {matches ? <Menu /> : null}
       </div>
       <div className="grid-menu pd-l portfolio-mb">
-        {card}
+        {data}
       </div>
     </main>
   );

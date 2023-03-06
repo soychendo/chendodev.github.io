@@ -1,55 +1,65 @@
-import React, { useState } from "react";
-import Technologies from "./Technologies";
+import React, { useContext, useState } from "react";
+import {CardContext} from "../../context/Card/CardContext";
+import Technologies from "../portfolio/Technologies";
 
-const Card = ({data}) => {
+const Card = ({items}) => {
 
-  const [click, setClik] = useState(false);
+  const { styles } = useContext(CardContext);
+
+  const [touch, setTouch] = useState(false);
   const [over, setOver] = useState(false);
 
-  // Card Animation - click Over
-  const handleMouseDown = () => ( setClik(true) );
-  const handleMouseAll = () => ( setClik(false) );
-  const handleMouseOver = () => ( setOver(true) );
-  const handleMouseOut = () => ( setOver(false) );
-
-  const styles = {
-    transform: "translateY(4px) scale(0.95) translateZ(0px)",
-    transformOver: "translateY(4px) scale(1.01) translateZ(0px)",
+  const onTouchStartHandle = () => {
+    setTouch(true)
   }
-  const techno = [];
-  data.technologies.forEach(data => {
-    techno.push(<Technologies key={data.name} data={data} />);
-  });
+  const onTouchEndHandle = () => {
+    setTouch(false)
+  }
+  const onMouseDownHandle = () => {
+    setTouch(true)
+  }
+  const onMouseUpHandle = () => {
+    setTouch(false)
+  }
+  const onMouseLeaveHandle = () => {
+    setTouch(false)
+  }
+  const onMouseOverHandle = () => {
+    setOver(true)
+  }
+  const onMouseOutHandle = () => {
+    setOver(false)
+  }
 
   return(
     <div className="col-md-4 col-lg-4 mb-4">
       <div
-      onTouchStart={handleMouseDown}
-      onTouchEnd={handleMouseAll}
-      onMouseDown={handleMouseDown}
-      onMouseUp={handleMouseAll}
-      onMouseLeave={handleMouseAll}
-      onMouseOver={handleMouseOver}
-      onMouseOut={handleMouseOut}
-      style={{transform: click ? styles.transform : over ? styles.transformOver: "none"}}
+      onTouchStart={onTouchStartHandle}
+      onTouchEnd={onTouchEndHandle}
+      onMouseDown={onMouseDownHandle}
+      onMouseUp={onMouseUpHandle}
+      onMouseLeave={onMouseLeaveHandle}
+      onMouseOver={onMouseOverHandle}
+      onMouseOut={onMouseOutHandle}
+      style={{transform: touch ? styles.transform : over ? styles.transformOver: "none"}}
       className="card"
-      id={data.id}
+      id={items.id}
       >
-        <img src={`assets/${data.image}`} className="card-img-top" alt={data.title} />
+        <img src={`assets/${items.image}`} className="card-img-top" alt={items.title} />
         <div className="technologies">
-          {techno}
+          <Technologies data={items} />
         </div>
         <div className="card-body">
-          <h2>{data.title}</h2>
-          <p>{data.description}</p>
+          <h2>{items.title}</h2>
+          <p>{items.description}</p>
         </div>
         <div className="buttons">
-          <a href={data.demo} target="_blank">Demo</a>
-          <a href={data.source} target="_blank">Code</a>
+          <a href={items.demo} target="_blank">Demo</a>
+          <a href={items.source} target="_blank">Code</a>
         </div>
       </div>
     </div>
   );
 }
 
-export default Card;
+export {Card};
