@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Technologies from "@components/portfolio/Technologies";
+import Technologies from "./Technologies";
 
 const Card = ({data}) => {
 
@@ -16,10 +16,10 @@ const Card = ({data}) => {
     transform: "translateY(4px) scale(0.95) translateZ(0px)",
     transformOver: "translateY(4px) scale(1.01) translateZ(0px)",
   }
-  const technologies = [];
-  data.technologies.forEach(url => {
-    technologies.push(<Technologies url={url} />);
-  })
+  const techno = [];
+  data.technologies.forEach(data => {
+    techno.push(<Technologies key={data.name} data={data} />);
+  });
 
   return(
     <div className="col-md-4 col-lg-4 mb-4">
@@ -37,7 +37,7 @@ const Card = ({data}) => {
       >
         <img src={`assets/${data.image}`} className="card-img-top" alt={data.title} />
         <div className="technologies">
-          {technologies}
+          {techno}
         </div>
         <div className="card-body">
           <h2>{data.title}</h2>

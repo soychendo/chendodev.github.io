@@ -1,7 +1,9 @@
 
-const Technologies = ({url}) => {
+const Technologies = ({data}) => {
   return (
-    <img src={url} alt="technologies" />
+    <a href={data.docs} target="_blank">
+      <img src={data.stack} alt={data.name} />
+    </a>
   );
 }
 

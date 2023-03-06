@@ -4,9 +4,21 @@ import { DataBase } from 'database/database.model';
 export const database: DataBase[] = [
   {
     technologies: [
-      "assets/html.png",
-      "assets/css.png",
-      "assets/javascript.png",
+      {
+        name: "html",
+        stack: "assets/html.png",
+        docs: "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      {
+        name: "css",
+        stack: "assets/css.png",
+        docs: "https://developer.mozilla.org/es/docs/Web/CSS"
+      },
+      {
+        name: "javascript",
+        stack: "assets/javascript.png",
+        docs: "https://developer.mozilla.org/es/docs/Web/JavaScript"
+      }
     ],
     title: "Audio Seven",
     description: "Reproductor de Audio creado en Html, Css y JavaScript, sencillo y elegante.",
@@ -17,9 +29,21 @@ export const database: DataBase[] = [
   },
   {
     technologies: [
-      "assets/html.png",
-      "assets/css.png",
-      "assets/reactjs.webp",
+      {
+        name: "html",
+        stack: "assets/html.png",
+        docs: "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      {
+        name: "sass",
+        stack: "assets/sass.png",
+        docs: "https://sass-lang.com/documentation/"
+      },
+      {
+        name: "reactjs",
+        stack: "assets/reactjs.webp",
+        docs: "https://reactjs.org/docs/getting-started.html"
+      }
     ],
     title: "Enchufe Virtual",
     description: "Espacio creado para compartir proyectos de código abierto, llevando el conocimiento a otro nivel.",
@@ -30,9 +54,21 @@ export const database: DataBase[] = [
   },
   {
     technologies: [
-      "assets/html.png",
-      "assets/css.png",
-      "assets/reactjs.webp",
+      {
+        name: "html",
+        stack: "assets/html.png",
+        docs: "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      {
+        name: "sass",
+        stack: "assets/sass.png",
+        docs: "https://sass-lang.com/documentation/"
+      },
+      {
+        name: "reactjs",
+        stack: "assets/reactjs.webp",
+        docs: "https://reactjs.org/docs/getting-started.html"
+      }
     ],
     title: "Windows",
     description: "Esta vesión de windows está creada en React, pero también tiene una versión en PHP.",
@@ -43,9 +79,21 @@ export const database: DataBase[] = [
   },
   {
     technologies: [
-      "assets/html.png",
-      "assets/css.png",
-      "assets/javascript.png",
+      {
+        name: "html",
+        stack: "assets/html.png",
+        docs: "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      {
+        name: "css",
+        stack: "assets/css.png",
+        docs: "https://developer.mozilla.org/es/docs/Web/CSS"
+      },
+      {
+        name: "javascript",
+        stack: "assets/javascript.png",
+        docs: "https://developer.mozilla.org/es/docs/Web/JavaScript"
+      }
     ],
     title: "Chendo Calc",
     description: "Calculadora científica, construida con Html, Css y JavaScript, uso intermedio.",
@@ -56,9 +104,21 @@ export const database: DataBase[] = [
   },
   {
     technologies: [
-      "assets/html.png",
-      "assets/css.png",
-      "assets/javascript.png",
+      {
+        name: "html",
+        stack: "assets/html.png",
+        docs: "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      {
+        name: "css",
+        stack: "assets/css.png",
+        docs: "https://developer.mozilla.org/es/docs/Web/CSS"
+      },
+      {
+        name: "javascript",
+        stack: "assets/javascript.png",
+        docs: "https://developer.mozilla.org/es/docs/Web/JavaScript"
+      }
     ],
     title: "Space",
     description: "Este es un proyecto basado en un desafío de FrontenMentor, Tiene Html, Css y JavaScript.",
@@ -69,9 +129,21 @@ export const database: DataBase[] = [
   },
   {
     technologies: [
-      "assets/html.png",
-      "assets/css.png",
-      "assets/javascript.png",
+      {
+        name: "html",
+        stack: "assets/html.png",
+        docs: "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      {
+        name: "css",
+        stack: "assets/css.png",
+        docs: "https://developer.mozilla.org/es/docs/Web/CSS"
+      },
+      {
+        name: "javascript",
+        stack: "assets/javascript.png",
+        docs: "https://developer.mozilla.org/es/docs/Web/JavaScript"
+      }
     ],
     title: "Devaechba",
     description: "Este proyecto fué creado con Html, Css y JavaScript, sitio en construcción.",
@@ -82,9 +154,21 @@ export const database: DataBase[] = [
   },
   {
     technologies: [
-      "assets/html.png",
-      "assets/css.png",
-      "assets/javascript.png",
+      {
+        name: "html",
+        stack: "assets/html.png",
+        docs: "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      {
+        name: "css",
+        stack: "assets/css.png",
+        docs: "https://developer.mozilla.org/es/docs/Web/CSS"
+      },
+      {
+        name: "javascript",
+        stack: "assets/javascript.png",
+        docs: "https://developer.mozilla.org/es/docs/Web/JavaScript"
+      }
     ],
     title: "Ace Search",
     description: "Buscador de imágenes que usa la API de Pexels, creado en Html, Css y JavaScript.",

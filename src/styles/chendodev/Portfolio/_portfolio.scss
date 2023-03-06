@@ -59,10 +59,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  user-select: none;
+}
+.card .technologies {
+  width: 100%;
+  height: 30px;
+}
+.card .technologies a {
+  margin-top: 1rem;
+  margin-left: 4px;
 }
 .card .technologies img {
   width: 25px;
   height: 25px;
-  margin: 4px 0 0 4px;
 }

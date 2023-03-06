@@ -1,6 +1,6 @@
 // Interface Model Card - Required
 export interface DataBase {
-  technologies: string[];
+  technologies: object[];
   title: string;
   description: string,
   image: string;
