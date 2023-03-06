@@ -3,6 +3,11 @@ import { DataBase } from 'database/database.model';
 
 export const database: DataBase[] = [
   {
+    technologies: [
+      "assets/html.png",
+      "assets/css.png",
+      "assets/javascript.png",
+    ],
     title: "Audio Seven",
     description: "Reproductor de Audio creado en Html, Css y JavaScript, sencillo y elegante.",
     image: "audioseven.jpg",
@@ -11,6 +16,11 @@ export const database: DataBase[] = [
     id: 1
   },
   {
+    technologies: [
+      "assets/html.png",
+      "assets/css.png",
+      "assets/reactjs.webp",
+    ],
     title: "Enchufe Virtual",
     description: "Espacio creado para compartir proyectos de código abierto, llevando el conocimiento a otro nivel.",
     image: "enchufevirtual.jpg",
@@ -19,6 +29,11 @@ export const database: DataBase[] = [
     id: 2
   },
   {
+    technologies: [
+      "assets/html.png",
+      "assets/css.png",
+      "assets/reactjs.webp",
+    ],
     title: "Windows",
     description: "Esta vesión de windows está creada en React, pero también tiene una versión en PHP.",
     image: "windows.jpg",
@@ -27,14 +42,24 @@ export const database: DataBase[] = [
     id: 3
   },
   {
+    technologies: [
+      "assets/html.png",
+      "assets/css.png",
+      "assets/javascript.png",
+    ],
     title: "Chendo Calc",
     description: "Calculadora científica, construida con Html, Css y JavaScript, uso intermedio.",
     image: "chendocalc.jpg",
-    source: "https://github.com/chendodev/chendoCalc",
+    source: "https://github.com/chendodev/chendocalc",
     demo: "https://chendo.dev/chendocalc",
     id: 4
   },
   {
+    technologies: [
+      "assets/html.png",
+      "assets/css.png",
+      "assets/javascript.png",
+    ],
     title: "Space",
     description: "Este es un proyecto basado en un desafío de FrontenMentor, Tiene Html, Css y JavaScript.",
     image: "space.jpg",
@@ -43,6 +68,11 @@ export const database: DataBase[] = [
     id: 5
   },
   {
+    technologies: [
+      "assets/html.png",
+      "assets/css.png",
+      "assets/javascript.png",
+    ],
     title: "Devaechba",
     description: "Este proyecto fué creado con Html, Css y JavaScript, sitio en construcción.",
     image: "devaechba.jpg",
@@ -51,6 +81,11 @@ export const database: DataBase[] = [
     id: 6
   },
   {
+    technologies: [
+      "assets/html.png",
+      "assets/css.png",
+      "assets/javascript.png",
+    ],
     title: "Ace Search",
     description: "Buscador de imágenes que usa la API de Pexels, creado en Html, Css y JavaScript.",
     image: "buscador.jpg",

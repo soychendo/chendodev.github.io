@@ -40,3 +40,29 @@
 .card-img-top {
     border-radius: 0;
 }
+.card .buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.card .buttons a {
+  width: 100%;
+  text-align: center;
+  padding: .5rem;
+  color: $color-three;
+  border-top: 1px solid $body;
+}
+.card .buttons a:first-child {
+  border-right: 1px solid $body;
+}
+.card .technologies {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+.card .technologies img {
+  width: 25px;
+  height: 25px;
+  margin: 4px 0 0 4px;
+}

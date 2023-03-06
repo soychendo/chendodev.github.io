@@ -1,8 +1,7 @@
 import React, { useState } from "react";
+import Technologies from "@components/portfolio/Technologies";
 
-import { database } from 'database/database';
-
-const Card = ({data, id}) => {
+const Card = ({data}) => {
 
   const [click, setClik] = useState(false);
   const [over, setOver] = useState(false);
@@ -12,17 +11,18 @@ const Card = ({data, id}) => {
   const handleMouseAll = () => ( setClik(false) );
   const handleMouseOver = () => ( setOver(true) );
   const handleMouseOut = () => ( setOver(false) );
-  // Click OnCard
-  const onclickCard = () => {
-    database.forEach(data => (id == data.id ? window.open(data.demo, "_blank") : null));
-  }
+
   const styles = {
     transform: "translateY(4px) scale(0.95) translateZ(0px)",
     transformOver: "translateY(4px) scale(1.01) translateZ(0px)",
   }
+  const technologies = [];
+  data.technologies.forEach(url => {
+    technologies.push(<Technologies url={url} />);
+  })
 
   return(
-    <div onClick={onclickCard} className="col-md-4 col-lg-4 mb-4">
+    <div className="col-md-4 col-lg-4 mb-4">
       <div
       onTouchStart={handleMouseDown}
       onTouchEnd={handleMouseAll}
@@ -36,9 +36,16 @@ const Card = ({data, id}) => {
       id={data.id}
       >
         <img src={`assets/${data.image}`} className="card-img-top" alt={data.title} />
+        <div className="technologies">
+          {technologies}
+        </div>
         <div className="card-body">
           <h2>{data.title}</h2>
           <p>{data.description}</p>
+        </div>
+        <div className="buttons">
+          <a href={data.demo} target="_blank">Demo</a>
+          <a href={data.source} target="_blank">Code</a>
         </div>
       </div>
     </div>

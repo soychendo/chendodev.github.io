@@ -11,7 +11,7 @@ const Portfolio = () => {
 
   const card = [];
   database.forEach(data => {
-    card.push(<Card key={faker.datatype.uuid()} data={data} id={data.id} />)
+    card.push(<Card key={faker.datatype.uuid()} data={data} />)
   });
 
   return(
