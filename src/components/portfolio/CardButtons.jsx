@@ -1,13 +1,13 @@
 
 import React from "react";
-import { goToLink } from "../../utils/location";
+import { goToLink } from "@utils/location";
 
 const CardButtons = ({ data }) => {
 
   return (
     <div className="Card_buttons">
-      <div className="button" onClick={() => goToLink(data.demo)} >Demo</div>
-      <div className="button" onClick={() => goToLink(data.source)} >Code</div>
+      <a onTouchStart={() => goToLink(data.demo)} href={data.demo} target="_blank">Demo</a>
+      <a onTouchStart={() => goToLink(data.source)} href={data.source} target="_blank" >Code</a>
     </div>
   );
 }

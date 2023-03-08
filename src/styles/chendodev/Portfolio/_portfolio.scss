@@ -57,7 +57,7 @@
   justify-content: space-around;
   align-items: center;
 }
-.Card .Card_buttons .button {
+.Card .Card_buttons a {
   width: 100%;
   text-align: center;
   padding: .5rem;
@@ -67,7 +67,7 @@
   border-top: 1px solid $body;
   cursor: pointer;
 }
-.Card .Card_buttons .button:first-child {
+.Card .Card_buttons a:first-child {
   border-right: 1px solid $body;
 }
 .Card .Technologies {
@@ -79,7 +79,7 @@
   width: 100%;
   height: 30px;
 }
-.Card .Technologies .tech {
+.Card .Technologies a {
   margin-top: 1rem;
   margin-left: 4px;
   background: $color-tech;
@@ -89,7 +89,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
 }
 .Card .Technologies img {
   width: 25px;

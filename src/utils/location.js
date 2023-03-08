@@ -1,6 +1,9 @@
 
+// Fixed problem touchstart in mobile
 const goToLink = (url) => {
-  window.open(url, "_blank");
+  setTimeout(() => {
+    window.open(url, "_blank");
+  }, 100);
 }
 
 export { goToLink };

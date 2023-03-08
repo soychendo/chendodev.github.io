@@ -5,9 +5,15 @@ import { goToLink } from "@utils/location";
 const CardTechnologies = ({ tech }) => {
 
   return (
-    <div className="tech" key={tech.name} title={tech.name}>
-      <img onClick={() => goToLink(tech.docs)} src={tech.stack} alt={tech.name} />
-    </div>
+    <a
+      key={tech.name}
+      href={tech.docs}
+      title={tech.name}
+      target="_blank"
+      onTouchStart={() => goToLink(tech.docs)}
+    >
+      <img src={tech.stack} alt={tech.name} />
+    </a>
   );
 }
 
