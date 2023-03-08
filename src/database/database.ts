@@ -5,17 +5,17 @@ export const database: DataBase[] = [
   {
     technologies: [
       {
-        name: "html",
+        name: "Html",
         stack: "assets/html.png",
         docs: "https://developer.mozilla.org/en-US/docs/Web/HTML",
       },
       {
-        name: "css",
+        name: "Css",
         stack: "assets/css.png",
         docs: "https://developer.mozilla.org/es/docs/Web/CSS",
       },
       {
-        name: "javascript",
+        name: "JavaScript",
         stack: "assets/javascript.png",
         docs: "https://developer.mozilla.org/es/docs/Web/JavaScript",
       }
@@ -30,19 +30,24 @@ export const database: DataBase[] = [
   {
     technologies: [
       {
-        name: "html",
+        name: "Html",
         stack: "assets/html.png",
         docs: "https://developer.mozilla.org/en-US/docs/Web/HTML",
       },
       {
-        name: "sass",
+        name: "Sass",
         stack: "assets/sass.png",
         docs: "https://sass-lang.com/documentation/",
       },
       {
-        name: "reactjs",
+        name: "ReactJs",
         stack: "assets/reactjs.webp",
         docs: "https://reactjs.org/docs/getting-started.html",
+      },
+      {
+        name: "TypeScript",
+        stack: "assets/typescript.png",
+        docs: "https://www.typescriptlang.org/docs/",
       }
     ],
     title: "Enchufe Virtual",
@@ -55,19 +60,24 @@ export const database: DataBase[] = [
   {
     technologies: [
       {
-        name: "html",
+        name: "Html",
         stack: "assets/html.png",
         docs: "https://developer.mozilla.org/en-US/docs/Web/HTML"
       },
       {
-        name: "sass",
+        name: "Sass",
         stack: "assets/sass.png",
         docs: "https://sass-lang.com/documentation/"
       },
       {
-        name: "reactjs",
+        name: "ReactJs",
         stack: "assets/reactjs.webp",
         docs: "https://reactjs.org/docs/getting-started.html"
+      },
+      {
+        name: "TypeScript",
+        stack: "assets/typescript.png",
+        docs: "https://www.typescriptlang.org/docs/",
       }
     ],
     title: "Windows",
@@ -80,17 +90,17 @@ export const database: DataBase[] = [
   {
     technologies: [
       {
-        name: "html",
+        name: "Html",
         stack: "assets/html.png",
         docs: "https://developer.mozilla.org/en-US/docs/Web/HTML"
       },
       {
-        name: "css",
+        name: "Css",
         stack: "assets/css.png",
         docs: "https://developer.mozilla.org/es/docs/Web/CSS"
       },
       {
-        name: "javascript",
+        name: "JavaScript",
         stack: "assets/javascript.png",
         docs: "https://developer.mozilla.org/es/docs/Web/JavaScript"
       }
@@ -105,17 +115,17 @@ export const database: DataBase[] = [
   {
     technologies: [
       {
-        name: "html",
+        name: "Html",
         stack: "assets/html.png",
         docs: "https://developer.mozilla.org/en-US/docs/Web/HTML"
       },
       {
-        name: "css",
+        name: "Css",
         stack: "assets/css.png",
         docs: "https://developer.mozilla.org/es/docs/Web/CSS"
       },
       {
-        name: "javascript",
+        name: "JavaScript",
         stack: "assets/javascript.png",
         docs: "https://developer.mozilla.org/es/docs/Web/JavaScript"
       }
@@ -130,17 +140,17 @@ export const database: DataBase[] = [
   {
     technologies: [
       {
-        name: "html",
+        name: "Html",
         stack: "assets/html.png",
         docs: "https://developer.mozilla.org/en-US/docs/Web/HTML"
       },
       {
-        name: "css",
+        name: "Css",
         stack: "assets/css.png",
         docs: "https://developer.mozilla.org/es/docs/Web/CSS"
       },
       {
-        name: "javascript",
+        name: "JavaScript",
         stack: "assets/javascript.png",
         docs: "https://developer.mozilla.org/es/docs/Web/JavaScript"
       }
@@ -155,17 +165,17 @@ export const database: DataBase[] = [
   {
     technologies: [
       {
-        name: "html",
+        name: "Html",
         stack: "assets/html.png",
         docs: "https://developer.mozilla.org/en-US/docs/Web/HTML"
       },
       {
-        name: "css",
+        name: "Css",
         stack: "assets/css.png",
         docs: "https://developer.mozilla.org/es/docs/Web/CSS"
       },
       {
-        name: "javascript",
+        name: "JavaScript",
         stack: "assets/javascript.png",
         docs: "https://developer.mozilla.org/es/docs/Web/JavaScript"
       }

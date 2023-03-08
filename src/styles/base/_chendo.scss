@@ -163,7 +163,7 @@ div {
       max-width: 25%;
   }
 }
-.card {
+.Card {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -177,7 +177,7 @@ div {
     user-select: none;
     height: 100%;
 }
-.card-body {
+.Card_body {
     color: $color-three;
     text-align: center;
     border: none;
@@ -185,10 +185,10 @@ div {
     flex: 1 1 auto;
     padding: 1.25rem;
 }
-.card-body h2 {
+.Card_body h2 {
   color: $color-a;
 }
-.card-body p {
+.Card_body p {
   font-size: 12px;
 }
 .btn {

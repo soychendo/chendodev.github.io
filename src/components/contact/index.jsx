@@ -1,23 +1,19 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "@context/GlobalContext";
 import { getBrowser } from '@utils/check';
-import Menu from "@components/menu";
-import useMediaQuery from '@hooks/useMediaQuery';
+import { Bartitle } from "@components/bartitle/Bartitle";
 
 import TelegramImage from '@images/telegram.svg';
 
 const Contact = () => {
   const { input, success, onSubmit, handleChange, state, handleSubmit } = useContext(GlobalContext);
-  const matches = useMediaQuery("(max-width: 992px)");
 
   const message = "Tu mensaje ha sido enviado correctamente";
+  const contact = "Contacto";
 
   return(
     <div onLoad={getBrowser} className="container-menu">
-     <div className="bartitle">
-        <h1>Contacto</h1>
-        {matches ? <Menu /> : null}
-      </div>
+     <Bartitle textBar={contact} />
      <div className="grid-menu">
          <div className="col-md-12 pd-l">
             <div className="container-contact">

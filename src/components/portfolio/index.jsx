@@ -1,21 +1,23 @@
-import React, {useContext} from "react"
-import Menu from "@components/menu";
-import useMediaQuery from '@hooks/useMediaQuery';
-import { CardContext } from "../../context/Card/CardContext"
+import React from "react"
+import { Card } from "./Card";
+import { database } from "database/database";
+import { Bartitle } from "../bartitle/Bartitle";
 
 const Portfolio = () => {
-  const matches = useMediaQuery("(max-width: 992px)");
-  const {data} = useContext(CardContext)
+
+  const portfolio = "Portafolio";
 
   return(
-    <main className="container-menu">
-      <div className="bartitle">
-        <h1>Portafolio</h1>
-        {matches ? <Menu /> : null}
-      </div>
-      <div className="grid-menu pd-l portfolio-mb">
-        {data}
-      </div>
+    <main className="Portfolio">
+      <Bartitle textBar={portfolio} />
+      <section className="Card_menu pd-l">
+        { database.map(card => (
+          <Card
+            key={card.id}
+            data={card}
+          />
+        ))}
+      </section>
     </main>
   );
 }

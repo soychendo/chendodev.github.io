@@ -1,21 +1,16 @@
 import React from "react"
 import { Link } from 'react-router-dom';
-import Menu from "@components/menu";
 import Mapa from '@images/mapa.png';
 import init from '@utils/fns-home';
-import useMediaQuery from '@hooks/useMediaQuery';
-
+import { Bartitle } from "@components/bartitle/Bartitle";
 
 const Home = () => {
-  const matches = useMediaQuery("(max-width: 992px)");
+  const home = "Home";
 
   return(
     <main onLoad={init} className="container-menu">
       <div className="map"><img src={Mapa} alt="Background Image - @chendodev" /></div>
-      <div className="bartitle">
-        <h1>Home</h1>
-        {matches ? <Menu /> : null}
-      </div>
+      <Bartitle textBar={home} />
       <div className="grid-menu mb-4">
         <div className="col-md-6 pd-l">
           <div className="col-content">

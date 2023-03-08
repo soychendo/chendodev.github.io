@@ -7,68 +7,87 @@
 		hyphens: auto;
 	}
 }
-.card-body p {
+.Portfolio {
+  max-width: calc(100% - 17%);
+  overflow-x: hidden;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  left: 17%;
+  padding-top: 5.5rem;
+}
+@media (max-width: 991px) {
+  .Portfolio {
+      width: 100%;
+      max-width: 100%;
+      position: relative;
+      left: 0;
+  }
+}
+.Card_menu {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: .7em;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+@media (min-width: 991px) {
+  .Card_menu  {
+      display: flex;
+      flex-wrap: wrap;
+  }
+}
+.Card_body p {
     text-align: center;
-}
-.card-body .button_portfolio {
-    display: flex;
-}
-.card-body .button_portfolio a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.card-body .button_portfolio a:first-child {
-    margin-right: 8px;
-}
-.card-body .button_portfolio a:last-child {
-    margin-right: 0;
-}
-.card:hover {
-    transform: scale(1.03,1.03);
-    border: none;
 }
 .source-code {
     pointer-events: all;
 }
 @media (max-width: 575px) {
-    .card:hover {
+    .Card:hover {
         pointer-events:none;
         touch-action: none;
     }
 }
-.card-img-top {
+.Card_img_top {
     border-radius: 0;
 }
-.card .buttons {
+.Card .Card_buttons {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.card .buttons a {
+.Card .Card_buttons a {
   width: 100%;
   text-align: center;
   padding: .5rem;
   color: $color-three;
   border-top: 1px solid $body;
 }
-.card .buttons a:first-child {
+.Card .Card_buttons a:first-child {
   border-right: 1px solid $body;
 }
-.card .technologies {
+.Card .Technologies {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.card .technologies {
+.Card .Technologies {
   width: 100%;
   height: 30px;
 }
-.card .technologies a {
+.Card .Technologies a {
   margin-top: 1rem;
   margin-left: 4px;
 }
-.card .technologies img {
+.Card .Technologies img {
   width: 25px;
   height: 25px;
+}
+.transition {
+  transition: all .2s ease-out;
+}
+.transition:hover {
+  transform: scale(1.03,1.03);
+  border: none;
 }

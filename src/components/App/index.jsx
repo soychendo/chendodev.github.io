@@ -8,15 +8,13 @@ import About from "@components/about/";
 import Contact from "@components/contact/";
 import Portfolio from "@components/portfolio/";
 import NotFound from "@components/notFound";
-import { CardProvider } from "../../context/Card/CardProvider";
 
 const App = () => {
   return (
     <>
     <Router>
-    <GlobalProvider>
-      <Header />
-      <CardProvider>
+      <GlobalProvider>
+        <Header />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/about" element={<About />} />
@@ -24,8 +22,7 @@ const App = () => {
           <Route exact path="/portfolio" element={<Portfolio />} />
           <Route exact path="*" element={<NotFound />} />
         </Routes>
-      </CardProvider>
-    </GlobalProvider>
+      </GlobalProvider>
     </Router>
     </>
   );

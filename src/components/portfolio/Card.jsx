@@ -1,39 +1,26 @@
-import React, { useContext, useState } from "react";
-import {CardContext} from "../../context/Card/CardContext";
-import Technologies from "../portfolio/Technologies";
+import React from "react";
+import { useCard } from "@hooks/useCard";
+import { CardBody } from "./CardBody";
+import { CardButtons } from "./CardButtons";
+import { CardImage } from "./CardImage";
+import { CardTechnologies } from "./CardTechnologies";
 
-const Card = ({items}) => {
+const Card = ({ data }) => {
 
-  const { styles } = useContext(CardContext);
-
-  const [touch, setTouch] = useState(false);
-  const [over, setOver] = useState(false);
-
-  const onTouchStartHandle = () => {
-    setTouch(true)
-  }
-  const onTouchEndHandle = () => {
-    setTouch(false)
-  }
-  const onMouseDownHandle = () => {
-    setTouch(true)
-  }
-  const onMouseUpHandle = () => {
-    setTouch(false)
-  }
-  const onMouseLeaveHandle = () => {
-    setTouch(false)
-  }
-  const onMouseOverHandle = () => {
-    setOver(true)
-  }
-  const onMouseOutHandle = () => {
-    setOver(false)
-  }
+  const {
+    onTouchStartHandle,
+    onTouchEndHandle,
+    onMouseDownHandle,
+    onMouseUpHandle,
+    onMouseLeaveHandle,
+    onMouseOverHandle,
+    onMouseOutHandle,
+    transformStyle
+  } = useCard();
 
   return(
-    <div className="col-md-4 col-lg-4 mb-4">
-      <div
+    <div
+      className="col-md-4 col-lg-4 mb-4 transition"
       onTouchStart={onTouchStartHandle}
       onTouchEnd={onTouchEndHandle}
       onMouseDown={onMouseDownHandle}
@@ -41,22 +28,17 @@ const Card = ({items}) => {
       onMouseLeave={onMouseLeaveHandle}
       onMouseOver={onMouseOverHandle}
       onMouseOut={onMouseOutHandle}
-      style={{transform: touch ? styles.transform : over ? styles.transformOver: "none"}}
-      className="card"
-      id={items.id}
-      >
-        <img src={`assets/${items.image}`} className="card-img-top" alt={items.title} />
-        <div className="technologies">
-          <Technologies data={items} />
+      style={transformStyle}
+    >
+      <div className="Card" id={data.id}>
+        <CardImage data={data} />
+        <div className="Technologies">
+          {data.technologies.map(tech => (
+            <CardTechnologies key={tech.name} tech={tech} />
+          ))}
         </div>
-        <div className="card-body">
-          <h2>{items.title}</h2>
-          <p>{items.description}</p>
-        </div>
-        <div className="buttons">
-          <a href={items.demo} target="_blank">Demo</a>
-          <a href={items.source} target="_blank">Code</a>
-        </div>
+        <CardBody data={data} />
+        <CardButtons data={data} />
       </div>
     </div>
   );
