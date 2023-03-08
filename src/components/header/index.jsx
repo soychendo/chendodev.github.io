@@ -3,7 +3,7 @@ import { GlobalContext } from "@context/GlobalContext";
 import useMediaQuery from '@hooks/useMediaQuery';
 import { NavLink } from 'react-router-dom'
 import Master from "@images/master.jpg";
-import Close from "./close";
+import Close from "./Close";
 
 const Header = () => {
 

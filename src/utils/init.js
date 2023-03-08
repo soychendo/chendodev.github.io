@@ -10,18 +10,6 @@
 
 -----------------------------------------------------------------------------------*/
 
-// animation set
-const animated = () => {
-  const anima = document.querySelectorAll('.cirdown');
-  anima.forEach( anima => {
-    anima.style.setProperty('--anima', 'paused');
-    setTimeout(() => {
-      anima.style.setProperty('--anima', null);
-    }, 100);
-  });
-}
-animated();
-
 // Type text animated
 class TypeWriter {
     constructor(txtElement, words, wait = 3000) {
@@ -78,12 +66,12 @@ class TypeWriter {
   }
 
   // Init App
-  const init = () => {
-    const txtElement = document.querySelector('.txt-type');
-    const words = JSON.parse(txtElement.getAttribute('data-words'));
-    const wait = txtElement.getAttribute('data-wait');
-    // Init TypeWriter
-    new TypeWriter(txtElement, words, wait);
-  }
+const init = () => {
+  const txtElement = document.querySelector('.txt-type');
+  const words = JSON.parse(txtElement.getAttribute('data-words'));
+  const wait = txtElement.getAttribute('data-wait');
+  // Init TypeWriter
+  new TypeWriter(txtElement, words, wait);
+}
 
-export default init;
+export { init };

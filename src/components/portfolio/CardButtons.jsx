@@ -1,12 +1,13 @@
 
 import React from "react";
+import { goToLink } from "../../utils/location";
 
 const CardButtons = ({ data }) => {
 
   return (
     <div className="Card_buttons">
-      <a href={data.demo} target="_blank">Demo</a>
-      <a href={data.source} target="_blank">Code</a>
+      <div className="button" onClick={() => goToLink(data.demo)} >Demo</div>
+      <div className="button" onClick={() => goToLink(data.source)} >Code</div>
     </div>
   );
 }
