@@ -1,5 +1,6 @@
 import { useReducer } from 'react';
 import { cardReducer } from './cardReducer';
+import useMediaQuery from '@hooks/useMediaQuery';
 
 import { Transform, touch } from "../hooks/types";
 
@@ -10,6 +11,7 @@ const useCard = (): object => {
     over: false,
   }
   const [state, dispatch] = useReducer(cardReducer, initialState);
+  const matches = useMediaQuery("(min-width: 778px)");
 
   const transform: Transform = {
     transform: "translateY(4px) scale(0.95) translateZ(0px)",
@@ -18,7 +20,7 @@ const useCard = (): object => {
 
   const transformStyle = {
     transform: state.touch
-      ? transform.transform : state.over
+      ? transform.transform : state.over && matches
       ? transform.transformOver : "none"
   }
 

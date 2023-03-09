@@ -3,7 +3,7 @@
 const goToLink = (url) => {
   setTimeout(() => {
     window.open(url, "_blank");
-  }, 100);
+  }, 500);
 }
 
 export { goToLink };

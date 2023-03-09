@@ -98,7 +98,11 @@
 .transition {
   transition: all .2s ease-out;
 }
-.transition:hover {
-  transform: scale(1.03,1.03);
-  border: none;
+@media (min-width: 768px) {
+  .transition:hover {
+    transform: scale(1.03,1.03);
+    border: none;
+  }
 }
+
+

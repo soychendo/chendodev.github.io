@@ -15,6 +15,7 @@ const Card = ({ data }) => {
     onMouseLeaveHandle,
     onMouseOverHandle,
     onMouseOutHandle,
+    resetTouch,
     transformStyle
   } = useCard();
 
@@ -34,11 +35,11 @@ const Card = ({ data }) => {
         <CardImage data={data} />
         <div className="Technologies">
           {data.technologies.map(tech => (
-            <CardTechnologies key={tech.name} tech={tech} />
+            <CardTechnologies key={tech.name} tech={tech} reset={resetTouch} />
           ))}
         </div>
         <CardBody data={data} />
-        <CardButtons data={data} />
+        <CardButtons data={data} reset={resetTouch} />
       </div>
     </div>
   );
