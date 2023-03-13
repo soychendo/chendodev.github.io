@@ -1,6 +1,6 @@
 
 import React from "react";
-import { goToLink } from "@utils/location";
+import { goToLink } from "../../utils/location";
 
 const CardTechnologies = ({ tech }) => {
 

@@ -1,12 +1,21 @@
 
-import React, { useState, ReactNode } from 'react';
+import { useState } from 'react';
+import type {  MouseEventHandler, ChangeEventHandler } from 'react';
 import { GlobalContext } from "@context/GlobalContext";
 import { useForm } from '@formspree/react';
+import { GlobalProviderTypes, ContactForm } from './types';
 
-const GlobalProvider: React.FC<{}> = ({children}: { children?: ReactNode }) => {
+
+const initialState = {
+  name: "",
+  email: "",
+  message: ""
+}
+
+const GlobalProvider = ({children}: GlobalProviderTypes ) => {
 
 const [menuBtn, setMenuBtn] = useState(false);
-const [input, setInput] = useState({name: "", email: "", message: ""});
+const [input, setInput] = useState<ContactForm>(initialState);
 const [state, handleSubmit] = useForm("meqdyjel"); //!! Important: You must create an account in formspree.io and generate your ID.
 const [success, setSuccess] = useState(false);
 
@@ -28,69 +37,64 @@ class Check {
     let result = true;
 
     if (!nameValue) {
-      this.msgError('!Ingrese un Nombre¡');
+      this.messageNotification('!Ingrese un Nombre¡');
       result = false;
     }
     else if (!this.isEmail(emailValue) || !emailValue) {
-        this.msgError('!Ingrese un email correcto¡');
+        this.messageNotification('!Ingrese un email correcto¡');
         result = false;
     }
     else if (!messageValue) {
-      this.msgError('!Ingrese un Mensaje¡');
+      this.messageNotification('!Ingrese un Mensaje¡');
       result = false;
+    }
+    else if(nameValue && emailValue && messageValue) {
+      this.messageNotification('Tu mensaje ha sido enviado correctamente');
+      setSuccess(true);
     }
     return result;
   }
-  private msgError(message: string) {
-    const small: HTMLElement | null = document.querySelector('small') ;
-
-    if(small !== null) {
-      small.innerText = message;
-      setTimeout(() => {
-        small.innerText = "";
-      }, 5000);
-    }
+  public messageNotification(message: string) {
+    const small: HTMLElement | null  = document.querySelector('small') ;
+    small!.innerHTML = message;
+    setTimeout(() => {small!.innerText = ""; }, 5000);
   }
-  private isEmail(email: string) {
+  private isEmail(email: string): boolean {
     return /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(email);
   }
 }
 let check = new Check(input.name, input.email, input.message);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    const value = e.target.value;
+  const handleChange: ChangeEventHandler<HTMLInputElement> = ({ target }) => {
+    const value = target.value;
     setInput({
       ...input,
-      [e.target.name]: value
+      [target.name]: value
     });
   }
-
-  const onSubmit = async (e: { preventDefault: () => void; }): Promise<void> =>  {
+  const onSubmit: MouseEventHandler<HTMLButtonElement> = async (event) =>  {
     // Validating input data
-    e.preventDefault();
+    event.preventDefault();
     try {
       !check.validate()
       ? (check.validate(), setSuccess(false))
-      : (setInput({name: "", email: "", message: ""}), setSuccess(true));
+      : (setInput({name: "", email: "", message: ""}));
     } catch (error) {
       console.log(error)
     }
   }
-  const setMenu = (): void => {
-    setMenuBtn(!menuBtn);
-  }
-  const handleClose = (): void => {
+
+  const handleClose = () => {
     setMenuBtn(false)
   }
 
   const valueContext = {
-    setMenu,
+    setMenuBtn,
     menuBtn,
     input,
     state,
     success,
     onSubmit,
-    setMenuBtn,
     handleSubmit,
     handleChange,
     handleClose

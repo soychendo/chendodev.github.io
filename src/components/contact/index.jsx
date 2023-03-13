@@ -8,7 +8,6 @@ import TelegramImage from '@images/telegram.svg';
 const Contact = () => {
   const { input, success, onSubmit, handleChange, state, handleSubmit } = useContext(GlobalContext);
 
-  const message = "Tu mensaje ha sido enviado correctamente";
   const contact = "Contacto";
 
   return(
@@ -41,11 +40,7 @@ const Contact = () => {
                   </div>
                   <textarea name="message" spellCheck="false" id="message" value={input.message} onChange={handleChange} placeholder="Mensaje"></textarea>
                   <div className="messageAndSubmit">
-                    <small
-                    className={success ? "succes" : ""}
-                    >
-                      {success ? message : ""}
-                    </small>
+                    <small className={success ? "succes" : ""}></small>
                     <button onClick={e => onSubmit(e)} type="submit" disabled={state.submitting} className="btn btn-chendo btn-block mb-4">Enviar</button>
                   </div>
                </form>

@@ -1,3 +1,21 @@
+import type { TouchEventHandler, MouseEventHandler } from 'react';
+
+type transformTypes = {
+  transform: string
+}
+export type OnTouch =  TouchEventHandler<HTMLDivElement>
+export type OnMouse =  MouseEventHandler<HTMLDivElement>
+
+export interface UseEffectCardTypes {
+  touchstart: OnTouch
+  touchend: OnTouch
+  mousedown: OnMouse
+  mouseup: OnMouse
+  mouseleave: OnMouse
+  mouseover: OnMouse
+  mouseout: OnMouse
+  transformStyle: transformTypes
+}
 
 export enum touch {
  TOUCH_START = "TOUCH_START",
@@ -23,3 +41,4 @@ export type Transform = {
   transform: string,
   transformOver: string
 }
+

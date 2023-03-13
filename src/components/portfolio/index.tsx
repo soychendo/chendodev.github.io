@@ -1,9 +1,9 @@
 import React from "react"
-import { Card } from "./Card";
 import { database } from "database/database";
 import { Bartitle } from "../bartitle/Bartitle";
+import { Card } from "./Card";
 
-const Portfolio = () => {
+const Portfolio = (): JSX.Element => {
 
   const portfolio = "Portafolio";
 
@@ -15,6 +15,7 @@ const Portfolio = () => {
           <Card
             key={card.id}
             data={card}
+            className="col-md-4 col-lg-4 mb-4 transition"
           />
         ))}
       </section>

@@ -1,8 +1,38 @@
+## 🛵 **Chendo Dev - Portoflio** 💫
+
 This is my official website, which I share with the entire community, if you like it and it helps you, please don't forget to leave your little star and follow me on the networks. Be free, be happy!!
 
-# Instructions
+# Clone It 🏁
 
-This project uses node in version v16.19.1, you can install it with the nvm version manager, it uses a database mock, in the database/ folder. Here you will find modifications of the cards and you can add more, just follow the sequence and place the directions correctly.
+### Clone repo
 
-Social Media: @chendodev
-Author: @chendodev | Contact me - <chendoec@live.com>
+- [Git](https://git-scm.com/downloads)
+
+```
+git clone git@github.com:chendodev/chendodev.github.io.git
+cd chendodev.github.io
+```
+
+### Node
+
+- [Node.js](https://nodejs.org/en/download/) (**v16**)
+
+```
+node -v
+npm install
+```
+
+##### Development
+
+```
+npm start
+```
+
+##### Production
+
+```
+npm build
+```
+
+👨‍💻 Social Media: @chendodev
+📨 Contact me - <chendoec@live.com>

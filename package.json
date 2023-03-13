@@ -4,6 +4,11 @@
   "homepage": "https://chendo.dev",
   "private": false,
   "description": "Developer && Web Designer ",
+  "author": {
+    "name": "Jorge Del Pezo",
+    "email": "chendodev@gmail.com",
+    "url": "https://chendo.dev"
+  },
   "main": "./src/index.jsx",
   "scripts": {
     "predeploy": "npm run build && echo chendo.dev > ./build/CNAME",
@@ -16,7 +21,6 @@
     "React",
     "TypeScript"
   ],
-  "author": "@chendodev <chendoec@live.com>",
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.20.2",

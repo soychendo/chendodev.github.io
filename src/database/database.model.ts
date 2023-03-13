@@ -1,6 +1,13 @@
 // Interface Model Card - Required
+
+type Tecno = {
+  name: string,
+  stack: string,
+  docs: string
+}
+
 export interface DataBase {
-  technologies: object[];
+  technologies: Array<Tecno>;
   title: string;
   description: string,
   image: string;

@@ -3,7 +3,7 @@ import Mapa from '@images/mapa.png';
 import { Bartitle } from "@components/bartitle/Bartitle";
 import { Description } from "./Description";
 import { SocialMedia } from "./SocialMedia";
-import { init } from "@utils/init";
+import { init } from "@utils/TypeWriter";
 
 const Home = () => {
   const home = "Home";

@@ -100,6 +100,9 @@ opacity: .1;
   .container-type h2 {
      font-size: 1.5em;
   }
+  .txt-type .txt {
+    font-size: 1em;
+  }
 }
 .container-type small {
   color: $color-gray;
@@ -113,7 +116,12 @@ opacity: .1;
   width: 45%;
 }
 .txt-type > .txt {
-  font-size: .7em;
+  font-size: 30px;
+}
+@media (max-width: 320px) {
+  .txt-type .txt {
+    font-size: 1em;
+  }
 }
 .txt-type > .txt::after {
   content: '|';
