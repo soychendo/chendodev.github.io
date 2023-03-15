@@ -1,6 +1,6 @@
 // Interface Model Card - Required
 
-type Tecno = {
+export type Tecno = {
   name: string,
   stack: string,
   docs: string

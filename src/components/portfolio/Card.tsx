@@ -1,17 +1,9 @@
-import type { HTMLAttributes } from "react";
 import { useEffectCard } from "@hooks/useEffectCard";
 import { CardBody } from "./CardBody";
 import { CardButtons } from "./CardButtons";
 import { CardImage } from "./CardImage";
 import { CardTechnologies } from "./CardTechnologies";
-import { DataBase } from "@/database/database.model";
-
-interface CardProps {
-  data: DataBase
-}
-type divNative = HTMLAttributes<HTMLDivElement>;
-
-type Props = CardProps & divNative;
+import { Props } from "./types";
 
 const Card = ({data, ...cardProps }: Props): JSX.Element => {
 

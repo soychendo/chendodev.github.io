@@ -2,13 +2,14 @@ import React from "react"
 import { database } from "database/database";
 import { Bartitle } from "../bartitle/Bartitle";
 import { Card } from "./Card";
+import { dragStart } from "../../utils/functions";
 
 const Portfolio = (): JSX.Element => {
 
   const portfolio = "Portafolio";
 
   return(
-    <main className="Portfolio">
+    <main onLoad={dragStart} className="Portfolio">
       <Bartitle textBar={portfolio} />
       <section className="Card_menu pd-l">
         { database.map(card => (

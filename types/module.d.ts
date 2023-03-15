@@ -6,3 +6,4 @@ declare module "@hooks/useEffectCard";
 declare module "@hooks/types";
 declare module "@images/close.png"
 declare module "@images/master.jpg"
+declare module "@utils/functions";

@@ -1,7 +1,7 @@
-
 import React from "react";
+import { CardProps } from "./types";
 
-const CardBody = ({ data }) => {
+const CardBody = ({ data }: CardProps): JSX.Element => {
 
   return (
     <div className="Card_body">

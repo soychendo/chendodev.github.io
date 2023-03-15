@@ -1,8 +1,9 @@
 
 import React from "react";
-import { goToLink } from "@utils/location";
+import { goToLink } from "../../utils/functions";
+import { CardProps } from "./types";
 
-const CardButtons = ({ data }) => {
+const CardButtons = ( { data }: CardProps ): JSX.Element => {
 
   return (
     <div className="Card_buttons">

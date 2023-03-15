@@ -1,8 +1,9 @@
 
 import React from "react";
-import { goToLink } from "../../utils/location";
+import { goToLink } from "../../utils/functions";
+import { Tech } from "./types";
 
-const CardTechnologies = ({ tech }) => {
+const CardTechnologies = ({ tech }: Tech ): JSX.Element => {
 
   return (
     <a
