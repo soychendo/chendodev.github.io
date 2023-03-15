@@ -84,10 +84,6 @@ let check = new Check(input.name, input.email, input.message);
     }
   }
 
-  const handleClose = () => {
-    setMenuBtn(false)
-  }
-
   const valueContext = {
     setMenuBtn,
     menuBtn,
@@ -97,7 +93,6 @@ let check = new Check(input.name, input.email, input.message);
     onSubmit,
     handleSubmit,
     handleChange,
-    handleClose
   }
 
   return (
