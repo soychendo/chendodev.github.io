@@ -1,9 +1,10 @@
 import { useEffectCard } from "@hooks/useEffectCard";
-import { CardBody } from "./CardBody";
-import { CardButtons } from "./CardButtons";
-import { CardImage } from "./CardImage";
-import { CardTechnologies } from "./CardTechnologies";
-import { Props } from "./types";
+import { CardBody } from "../CardBody";
+import { CardButtons } from "../CardButtons";
+import { CardImage } from "../CardImage";
+import { CardTechnologies } from "../CardTechnologies";
+import { Props } from "../types";
+import { CardContainer } from "./styles";
 
 const Card = ({data, ...cardProps }: Props): JSX.Element => {
 
@@ -30,7 +31,7 @@ const Card = ({data, ...cardProps }: Props): JSX.Element => {
     style={transformStyle}
     {...cardProps}
     >
-      <div className="Card">
+      <CardContainer className="Card">
         <CardImage data={data} />
         <div className="Technologies">
           {data.technologies.map(tech => (
@@ -39,7 +40,7 @@ const Card = ({data, ...cardProps }: Props): JSX.Element => {
         </div>
         <CardBody data={data} />
         <CardButtons data={data} />
-      </div>
+      </CardContainer>
     </div>
   );
 }

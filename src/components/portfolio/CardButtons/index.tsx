@@ -1,7 +1,7 @@
 
 import React from "react";
-import { goToLink } from "../../utils/functions";
-import { CardProps } from "./types";
+import { goToLink } from "../../../utils/functions";
+import { CardProps } from "../types";
 
 const CardButtons = ( { data }: CardProps ): JSX.Element => {
 

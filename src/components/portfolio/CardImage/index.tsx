@@ -1,6 +1,6 @@
 
 import React from "react";
-import { CardProps } from "./types";
+import { CardProps } from "../types";
 
 const CardImage = ( { data }: CardProps ): JSX.Element => {
 

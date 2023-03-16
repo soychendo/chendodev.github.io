@@ -1,13 +1,14 @@
 import React from "react";
-import { CardProps } from "./types";
+import { CardProps } from "../types";
+import { CardBodyContainer } from "./styles";
 
 const CardBody = ({ data }: CardProps): JSX.Element => {
 
   return (
-    <div className="Card_body">
+    <CardBodyContainer>
       <h2>{data.title}</h2>
       <p>{data.description}</p>
-    </div>
+    </CardBodyContainer>
   );
 }
 

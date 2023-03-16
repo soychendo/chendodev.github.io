@@ -15,6 +15,14 @@ const GlobalStyle = createGlobalStyle`
     -webkit-touch-callout: none;
     user-select: none;
   }
+  ::selection {
+      background: $color;
+      color: #fff;
+  }
+  ::-moz-selection {
+      background: $color;
+      color: #fff;
+  }
   html {
     font-family: sans-serif;
     line-height: 1.15;

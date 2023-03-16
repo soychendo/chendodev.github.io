@@ -1,6 +1,6 @@
 
 import React from "react";
-import { goToLink } from "../../utils/functions";
+import { goToLink } from "../../../utils/functions";
 import { Tecno } from "@/database/database.model";
 
 const CardTechnologies = ({ name, docs, stack }: Tecno ): JSX.Element => {
