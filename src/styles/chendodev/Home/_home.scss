@@ -57,6 +57,8 @@ opacity: .1;
 @media (max-width: 768px) {
   .map {
       background: url(../../public/assets/mapa-vh.png);
+      background-size: cover;
+      height: 100vh;
       opacity: .1;
       bottom: 0;
       right: 0;

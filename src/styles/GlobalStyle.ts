@@ -20,6 +20,9 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: transparent;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
   }
   body {
     font-size: 1rem;
@@ -27,6 +30,7 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.5;
     text-align: left;
     overscroll-behavior: none;
+    height: 100%;
   }
 
 `
