@@ -1,22 +1,4 @@
-*,
-::after,
-::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-html {
-    font-family: sans-serif;
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent;
-}
-body {
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    text-align: left;
-}
+
 ::selection {
     background: $color;
     color: #fff;
@@ -79,18 +61,6 @@ img {
     width: 100%;
     height: 100%;
     border-style: none;
-}
-article,
-aside,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-main,
-nav,
-section {
-    display: block;
 }
 .col-lg-4,
 .col-md-12,

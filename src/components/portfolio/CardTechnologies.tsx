@@ -1,19 +1,19 @@
 
 import React from "react";
 import { goToLink } from "../../utils/functions";
-import { Tech } from "./types";
+import { Tecno } from "@/database/database.model";
 
-const CardTechnologies = ({ tech }: Tech ): JSX.Element => {
+const CardTechnologies = ({ name, docs, stack }: Tecno ): JSX.Element => {
 
   return (
     <a
-      key={tech.name}
-      href={tech.docs}
-      title={tech.name}
+      key={name}
+      href={docs}
+      title={name}
       target="_blank"
-      onTouchStart={() => goToLink(tech.docs)}
+      onTouchStart={() => goToLink(docs)}
     >
-      <img src={tech.stack} alt={tech.name} />
+      <img src={stack} alt={name} />
     </a>
   );
 }

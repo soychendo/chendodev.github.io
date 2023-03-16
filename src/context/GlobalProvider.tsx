@@ -5,7 +5,6 @@ import { GlobalContext } from "@context/GlobalContext";
 import { useForm } from '@formspree/react';
 import { GlobalProviderTypes, ContactForm } from './types';
 
-
 const initialState = {
   name: "",
   email: "",

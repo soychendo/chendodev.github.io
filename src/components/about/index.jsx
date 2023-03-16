@@ -1,5 +1,5 @@
 import React from "react"
-import { Bartitle } from "@components/bartitle/Bartitle";
+import { Bartitle } from "@components/Bartitle";
 
 const About = () => {
 

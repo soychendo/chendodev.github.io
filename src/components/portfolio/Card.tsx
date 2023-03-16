@@ -34,7 +34,7 @@ const Card = ({data, ...cardProps }: Props): JSX.Element => {
         <CardImage data={data} />
         <div className="Technologies">
           {data.technologies.map(tech => (
-            <CardTechnologies key={tech.name} tech={tech} />
+            <CardTechnologies key={tech.name} {...tech} />
           ))}
         </div>
         <CardBody data={data} />

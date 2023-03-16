@@ -3,7 +3,7 @@ import { GlobalContext } from "../../context/GlobalContext";
 import useMediaQuery from '@hooks/useMediaQuery';
 import Master from "@images/master.jpg";
 import Close from "./Close";
-import { NavLinks } from "./NavLink";
+import { ContainerNav } from "./ContainerNav";
 import { MenuSocial } from "./MenuSocial";
 
 const Header = () => {
@@ -25,7 +25,7 @@ const Header = () => {
               </div>
             </div>
             <div className="col-menu">
-              <NavLinks />
+              <ContainerNav />
             </div>
             <MenuSocial />
           </div>

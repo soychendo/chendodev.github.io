@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 import { GlobalContext } from '../../context/GlobalContext';
 import useMediaQuery from '@hooks/useMediaQuery';
-import { Menu } from "../menu";
+import { Menu } from "../Menu";
+import { MenuWrapper } from "./styles";
 
 type TextBar = { textBar?: string }
 
@@ -11,7 +12,7 @@ const Bartitle = ({ textBar }: TextBar): JSX.Element => {
   const matches = useMediaQuery("(max-width: 992px)");
 
   return (
-    <div className="bartitle">
+    <MenuWrapper className="bartitle">
       <h1>{ textBar }</h1>
       {matches
       ? <Menu
@@ -21,7 +22,7 @@ const Bartitle = ({ textBar }: TextBar): JSX.Element => {
         />
       : null
       }
-    </div>
+    </MenuWrapper>
   );
 }
 

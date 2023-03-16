@@ -1,6 +1,6 @@
 import React from "react"
 import Mapa from '@images/mapa.png';
-import { Bartitle } from "@components/bartitle/Bartitle";
+import { Bartitle } from "@components/Bartitle";
 import { Description } from "./Description";
 import { SocialMedia } from "./SocialMedia";
 import { init } from "@utils/TypeWriter";

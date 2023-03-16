@@ -1,6 +1,7 @@
 import React from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { GlobalProvider } from '@context/GlobalProvider';
+import { GlobalStyle } from '../../styles/GlobalStyle';
 
 import Home from "@components/home/";
 import Header from "@components/header/";
@@ -13,6 +14,7 @@ const App = () => {
   return (
     <>
     <Router>
+      <GlobalStyle />
       <GlobalProvider>
         <Header />
         <Routes>

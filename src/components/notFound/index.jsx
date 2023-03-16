@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import Mapa from '@images/mapa.png';
-import { Bartitle } from "@components/bartitle/Bartitle";
+import { Bartitle } from "@components/Bartitle";
 
 const NotFound = () => {
   const error404 = "¡Ups!";

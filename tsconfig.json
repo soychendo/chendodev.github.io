@@ -24,6 +24,6 @@
     "noImplicitReturns": true,                        /* Enable error reporting for codepaths that do not explicitly return in a function. */
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
   },
-  "include": ["**/*.ts", "**/*.tsx", "types/*.d.ts", "src/components/menu/index.tsx"],
+  "include": ["**/*.ts", "**/*.tsx", "types/*.d.ts", "src/components/Menu/index.tsx"],
   "exclude": ["node_modules", "src/**/*.spec.ts"]
 }

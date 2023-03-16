@@ -1,14 +1,14 @@
 import type { HTMLAttributes } from "react";
-
+import { ContainerButton, MenuButton } from "./styles";
 
 type DivNative = HTMLAttributes<HTMLDivElement>
 
 const Menu = ({ ...divProps }: DivNative): JSX.Element => {
 
  return (
-  <div { ...divProps } >
-    <div className="MenuBtn_burger"></div>
-  </div>
+  <ContainerButton { ...divProps } >
+    <MenuButton className="MenuBtn_burger"></MenuButton>
+  </ContainerButton>
  );
 }
 

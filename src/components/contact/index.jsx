@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "@context/GlobalContext";
 import { getBrowser } from '@utils/check';
-import { Bartitle } from "@components/bartitle/Bartitle";
+import { Bartitle } from "@components/Bartitle";
 
 import TelegramImage from '@images/telegram.svg';
 

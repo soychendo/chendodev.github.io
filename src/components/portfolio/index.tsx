@@ -1,6 +1,6 @@
 import React from "react"
 import { database } from "database/database";
-import { Bartitle } from "../bartitle/Bartitle";
+import { Bartitle } from "../Bartitle";
 import { Card } from "./Card";
 import { dragStart } from "../../utils/functions";
 

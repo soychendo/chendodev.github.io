@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
 import { NavLink } from 'react-router-dom'
-import { GlobalContext } from "../../context/GlobalContext";
-import { GetLinkStyle, LinkStyle } from "./types";
-import { links } from "./data";
+import { GlobalContext } from "../../../context/GlobalContext";
+import { Nav } from "./styles";
+import { GetLinkStyle, LinkStyle } from "../types";
+import { links } from "../data";
 
-const NavLinks = (): JSX.Element => {
+const ContainerNav = (): JSX.Element => {
 
   const { setMenuBtn } = useContext(GlobalContext);
 
@@ -15,7 +16,7 @@ const NavLinks = (): JSX.Element => {
   const setStyles = () => setMenuBtn(false);
 
   return (
-    <div className="nav">
+    <Nav className="nav">
       {links.map(({ to, text, target }) => (
         <NavLink
           className="nav-link"
@@ -28,8 +29,8 @@ const NavLinks = (): JSX.Element => {
           {text}
         </NavLink>
       ))}
-    </div>
+    </Nav>
   );
 }
 
-export { NavLinks };
+export { ContainerNav };
