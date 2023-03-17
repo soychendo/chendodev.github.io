@@ -15,7 +15,7 @@ const skeletonBackground = (light: boolean) => (
       ? css`linear-gradient(-90deg, #333 0%, #ddd 50%, #333 100%)`
       : css`linear-gradient(-90deg, #191919 0%, #242424 50%, #191919 100%)`};
     background-size: 400% 400%;
-    animation: ${skeletonLoading} 1.2s ease-in-out infinite;
+    animation: ${skeletonLoading} 1.4s ease-in-out infinite;
     `
 )
 

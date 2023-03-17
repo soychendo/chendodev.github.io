@@ -16,7 +16,7 @@ const Portfolio = (): JSX.Element => {
     renderCard()
     setTimeout(() => {
       setLoading(false)
-    }, 700);
+    }, 500);
   }, [])
 
   const renderSkeleton = () => (
