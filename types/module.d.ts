@@ -7,5 +7,4 @@ declare module "@hooks/types";
 declare module "@images/close.png"
 declare module "@images/master.jpg"
 declare module "@utils/functions";
-declare module "@public/assets/imageSkeleton.png";
-declare module "./styles"
+declare module "@public/assets/imageSkeleton.svg";

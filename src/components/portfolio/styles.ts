@@ -31,12 +31,13 @@ export const CardWrapper = styled.div`
   overflow: hidden;
   transition: all 0.2s ease-out 0s;
   width: 100%;
-  height: 355px;
+  height: 100%;
 `
-export const CardImage = styled.img`
-  width: 100%;
-  height: auto !important;
+export const CardImage = styled.div`
   ${() => css`${skeletonStyle()}`}
+  width: 100%;
+  height: 225px;
+  overflow: hidden;
 `
 export const CardTechnologies = styled.div`
   display: flex;
@@ -59,15 +60,11 @@ export const CardTitle = styled.div`
   ${() => css`${skeletonStyle()}`}
 `;
 export const CardDescription = styled.div`
-  border: none;
-  flex: 1 1 auto;
-  padding: 1.25rem;
   ${() => css`${skeletonStyle()}`}
+  width: 100%;
+  height: 100%;
 `
 export const CardButtons = styled.div`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 50px;
-  background-color: #191919;
+  height: 100px;
+  ${() => css`${skeletonStyle()}`}
 `

@@ -5,11 +5,9 @@ import {
   CardImage,
   CardTechnologies,
   ChildTechnology,
-  CardTitle,
   CardDescription,
   CardButtons
 } from './styles'
-import image from '@public/assets/imageSkeleton.png';
 import { database } from "database/database";
 
 export const skeleton: Array<number> = []
@@ -21,7 +19,7 @@ export const CardSkeleton = (): JSX.Element => {
   return (
     <ContainerSkeleton>
       <CardWrapper>
-        <CardImage src={image} />
+        <CardImage />
         <CardTechnologies >
           <ChildTechnology />
           <ChildTechnology />
