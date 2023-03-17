@@ -16,13 +16,12 @@ const Portfolio = (): JSX.Element => {
     renderCard()
     setTimeout(() => {
       setLoading(false)
-    }, 500);
+    }, 700);
   }, [])
 
   const renderSkeleton = () => (
    skeleton.map(item => <CardSkeleton key={item} />)
   )
-
   const renderCard = () => (
     database.map(card => (
       <Card key={card.id} data={card} className={classCard} />

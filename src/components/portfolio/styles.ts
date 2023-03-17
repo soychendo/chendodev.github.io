@@ -31,7 +31,7 @@ export const CardWrapper = styled.div`
   overflow: hidden;
   transition: all 0.2s ease-out 0s;
   width: 100%;
-  height: 350px;
+  height: 355px;
 `
 export const CardImage = styled.img`
   width: 100%;
@@ -47,11 +47,16 @@ export const CardTechnologies = styled.div`
   ${() => css`${skeletonStyle()}`}
 `
 export const ChildTechnology = styled.div`
-  background-color: rgba(25, 25, 25, .5);
+  background-color: #191919;
   width: 30px;
   height: 30px;
   margin-left: 4px;
   border-radius: 50%;
+`;
+export const CardTitle = styled.div`
+  text-align: center;
+  color: #fff;
+  ${() => css`${skeletonStyle()}`}
 `;
 export const CardDescription = styled.div`
   border: none;

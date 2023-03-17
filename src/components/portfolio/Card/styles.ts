@@ -14,5 +14,5 @@ export const CardContainer = styled.div`
   transition: all .2s ease-out;
   user-select: none;
   height: 100%;
-  visibility: hidden;
+  display: none;
 `;

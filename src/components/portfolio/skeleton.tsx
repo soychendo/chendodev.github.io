@@ -5,6 +5,7 @@ import {
   CardImage,
   CardTechnologies,
   ChildTechnology,
+  CardTitle,
   CardDescription,
   CardButtons
 } from './styles'
@@ -22,9 +23,9 @@ export const CardSkeleton = (): JSX.Element => {
       <CardWrapper>
         <CardImage src={image} />
         <CardTechnologies >
-          <ChildTechnology></ChildTechnology>
-          <ChildTechnology></ChildTechnology>
-          <ChildTechnology></ChildTechnology>
+          <ChildTechnology />
+          <ChildTechnology />
+          <ChildTechnology />
         </CardTechnologies>
         <CardDescription />
         <CardButtons />

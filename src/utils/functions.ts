@@ -17,7 +17,7 @@ export const onVisibility = (): void => {
   const cards = document.querySelectorAll('.Card') as NodeListOf<HTMLDivElement>;
   setTimeout(() => {
     cards.forEach(card => {
-      card.style.visibility = 'visible';
+      card.style.display = 'flex';
     })
-  }, 500);
+  }, 700);
 }
