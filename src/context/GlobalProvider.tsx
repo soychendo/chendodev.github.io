@@ -36,15 +36,15 @@ class Check {
     let result = true;
 
     if (!nameValue) {
-      this.messageNotification('!Ingrese un Nombre¡');
+      this.messageNotification('Ingrese un Nombre');
       result = false;
     }
     else if (!this.isEmail(emailValue) || !emailValue) {
-        this.messageNotification('!Ingrese un email correcto¡');
+        this.messageNotification('Ingrese un email correcto');
         result = false;
     }
     else if (!messageValue) {
-      this.messageNotification('!Ingrese un Mensaje¡');
+      this.messageNotification('Ingrese un Mensaje');
       result = false;
     }
     else if(nameValue && emailValue && messageValue) {

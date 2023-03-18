@@ -27,13 +27,5 @@ export const Link = styled(LinkRouter)`
   width: 100%;
   &[aria-current] {
     color: #42b883;
-
-    &:after {
-      content: '·';
-      position: absolute;
-      bottom: 0;
-      font-size: 34px;
-      line-height: 20px;
-    }
   }
 `

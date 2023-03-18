@@ -8,7 +8,7 @@ const CardButtons = ( { data }: CardProps ): JSX.Element => {
   return (
     <div className="Card_buttons">
       <TouchableAnchor url={data.demo} >Demo</TouchableAnchor>
-      <TouchableAnchor url={data.source} >Demo</TouchableAnchor>
+      <TouchableAnchor url={data.source} >Source</TouchableAnchor>
     </div>
   );
 }

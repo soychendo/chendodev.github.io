@@ -7,9 +7,9 @@ input:-webkit-autofill:active {
     box-shadow: 0 0 0 30px rgb(19, 19, 19) inset !important; }
 input:-webkit-autofill { -webkit-text-fill-color: rgb(255, 255, 255);}
 /* color */
-@media (min-width: 768px) {
+@media (min-width: 375px) {
     .container-contact, .cont-form {
-        padding: 3rem;
+        padding: 1rem;
     }
 }
 /*----content form----*/
@@ -73,7 +73,7 @@ input:-webkit-autofill { -webkit-text-fill-color: rgb(255, 255, 255);}
     flex-direction: column;
 }
 input, textarea {
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-family: $font-second;
     padding: .5em 0 .5em 0;
     margin: .1em;
@@ -81,7 +81,7 @@ input, textarea {
     background-color: transparent;
     outline: none;
     border: none;
-    border-bottom: 2px dotted $color;
+    border-bottom: 1px solid $color;
 }
 textarea {
     max-width: 100%;
@@ -101,7 +101,7 @@ textarea {
 }
 .form-control input {
 	outline: 1px solid $body;
-    outline: none;
+  outline: none;
 	width: 100%;
 }
 
@@ -124,13 +124,13 @@ textarea {
 	visibility: visible;
 }
 .messageAndSubmit {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 .messageAndSubmit small {
-    font-size: 1em;
-    color: $error;
-    padding: 1em 0 0 0;
+  font-size: 1em;
+  color: $error;
+  padding: 1em 0 0 0;
 }
 .succes {
   color: $succes !important;
