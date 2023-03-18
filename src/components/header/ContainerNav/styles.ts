@@ -1,4 +1,11 @@
 import styled from "styled-components";
+import { NavLink as NavLinkRouter } from "react-router-dom";
+
+export const NavLink = styled(NavLinkRouter)`
+  &[aria-current] {
+    color: #42b883;
+  }
+`;
 
 export const Nav = styled.nav`
 
@@ -21,10 +28,5 @@ export const Nav = styled.nav`
     margin-bottom: 1em;
     word-wrap: anywhere;
     cursor: pointer;
-
-    &:hover {
-      color: #B3B8C1;
-    }
-
   }
 `;

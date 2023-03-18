@@ -7,12 +7,6 @@ export const dragStart: MouseEventHandler<HTMLElement> = (): void => {
       event.preventDefault();
   })
 }
-// Fixed problem touchstart in mobile
-export const goToLink = (url: string): void => {
-  setTimeout(() => {
-    window.open(url, "_blank");
-  }, 500);
-}
 export const onVisibility = (): void => {
   const cards = document.querySelectorAll('.Card') as NodeListOf<HTMLDivElement>;
   setTimeout(() => {

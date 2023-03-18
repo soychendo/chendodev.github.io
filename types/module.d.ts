@@ -8,3 +8,4 @@ declare module "@images/close.png"
 declare module "@images/master.jpg"
 declare module "@utils/functions";
 declare module "@public/assets/imageSkeleton.svg";
+declare module "@components/Anchor";

@@ -104,6 +104,11 @@ scrollbar-color: $color-a $body !important;
         flex-wrap: wrap;
     }
 }
+@media (max-width: 480px) {
+  .grid-menu  {
+      margin-bottom: 50px;
+  }
+}
 @media (max-width: 575px) {
     .col-md-6 {
         padding: 1em 1.5em;

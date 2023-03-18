@@ -4,7 +4,7 @@ import { GlobalProvider } from '@context/GlobalProvider';
 import { GlobalStyle } from '../../styles/GlobalStyle';
 
 import Home from "@components/home/";
-import Header from "@components/header/";
+import {Header} from "@components/header/";
 import About from "@components/about/";
 import Contact from "@components/contact/";
 import Portfolio from "@components/portfolio/";

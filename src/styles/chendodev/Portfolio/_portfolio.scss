@@ -37,6 +37,11 @@
       flex-wrap: wrap;
   }
 }
+@media (max-width: 480px) {
+  .Card_menu  {
+      margin-bottom: 50px;
+  }
+}
 .Card_body p {
     text-align: center;
 }

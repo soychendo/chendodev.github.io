@@ -1,20 +1,17 @@
 
 import React from "react";
-import { goToLink } from "../../../utils/functions";
 import { Tecno } from "@/database/database.model";
+import { TouchableAnchor } from "@components/Anchor";
 
 const CardTechnologies = ({ name, docs, stack }: Tecno ): JSX.Element => {
 
   return (
-    <a
-      key={name}
-      href={docs}
-      title={name}
-      target="_blank"
-      onTouchStart={() => goToLink(docs)}
+    <TouchableAnchor
+      url={docs}
+      name={name}
     >
       <img src={stack} alt={name} />
-    </a>
+    </TouchableAnchor>
   );
 }
 

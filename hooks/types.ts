@@ -1,13 +1,7 @@
 import type {
   TouchEventHandler,
   MouseEventHandler,
-  RefObject
 } from 'react';
-
-export interface HeightContainerProps {
-  heightContainer: number;
-  containerRef: RefObject<HTMLDivElement>;
-}
 
 type transformTypes = {
   transform: string
