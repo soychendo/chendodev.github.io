@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Tecno } from "@/database/database.model";
+import { Tecno } from "@database/database.model";
 import { TouchableAnchor } from "@components/Anchor";
 
 const CardTechnologies = ({ name, docs, stack }: Tecno ): JSX.Element => {

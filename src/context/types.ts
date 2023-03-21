@@ -1,4 +1,4 @@
-import type { MouseEventHandler, ReactNode } from "react";
+import type { FormEventHandler, ReactNode, ChangeEventHandler } from "react";
 
 export type GlobalProviderTypes = {
   children: ReactNode
@@ -9,15 +9,19 @@ export type ContactForm = {
   message: string
 }
 
+type InstanceType = {
+  onSubmit: FormEventHandler<HTMLFormElement> | undefined;
+  onChange: ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>;
+}
+
 export type ContextProps = {
   handleMenu: React.Dispatch<React.SetStateAction<boolean>>;
   menuBtn: boolean;
-  input: object;
-  state: object;
+  name: string;
+  email: string;
+  message: string;
   success: boolean;
-  handleSubmit: unknown;
+  check: InstanceType
   setMenuBtn: React.Dispatch<React.SetStateAction<boolean>>;
-  onSubmit: (e: MouseEventHandler<HTMLButtonElement>) => {};
-  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => {};
   handleClose: React.Dispatch<React.SetStateAction<boolean>>;
 }

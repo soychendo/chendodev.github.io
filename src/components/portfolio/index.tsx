@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react"
-import { database } from "database/database";
-import { Bartitle } from "../Bartitle";
+import  { database }  from "@database/database";
+import { Bartitle } from '@components/Bartitle';
 import { Card } from "./Card";
-import { dragStart, onVisibility } from "../../utils/functions";
+import { dragStart, onVisibility } from "@utils/functions";
 import { CardSkeleton, skeleton } from "./skeleton";
 
 const Portfolio = (): JSX.Element => {

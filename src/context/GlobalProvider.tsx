@@ -1,9 +1,9 @@
 
 import { useState } from 'react';
-import type {  MouseEventHandler, ChangeEventHandler } from 'react';
+import type {  FormEventHandler, ChangeEventHandler } from 'react';
 import { GlobalContext } from "@context/GlobalContext";
-import { useForm } from '@formspree/react';
 import { GlobalProviderTypes, ContactForm } from './types';
+import axios from 'axios';
 
 const initialState = {
   name: "",
@@ -13,85 +13,109 @@ const initialState = {
 
 const GlobalProvider = ({children}: GlobalProviderTypes ) => {
 
-const [menuBtn, setMenuBtn] = useState(false);
-const [input, setInput] = useState<ContactForm>(initialState);
-const [state, handleSubmit] = useForm("meqdyjel"); //!! Important: You must create an account in formspree.io and generate your ID.
-const [success, setSuccess] = useState(false);
+  const [menuBtn, setMenuBtn] = useState(false);
+  const [input, setInput] = useState<ContactForm>(initialState);
+  const [success, setSuccess] = useState(false);
 
-class Check {
+  class Check {
 
-  private name: string;
-  private email: string;
-  private message: string;
+    private name: string;
+    private email: string;
+    private message: string;
 
-  constructor(name: string, email: string, message: string) {
-    this.name = name;
-    this.email = email;
-    this.message = message;
-  }
-  public validate() {
-    const nameValue = this.name.trim();
-    const emailValue = this.email.trim();
-    const messageValue = this.message.trim();
-    let result = true;
-
-    if (!nameValue) {
-      this.messageNotification('Ingrese un Nombre');
-      result = false;
+    constructor(name: string, email: string, message: string) {
+      this.name = name;
+      this.email = email;
+      this.message = message;
     }
-    else if (!this.isEmail(emailValue) || !emailValue) {
-        this.messageNotification('Ingrese un email correcto');
+    protected validate() {
+      const nameValue = this.name.trim();
+      const emailValue = this.email.trim();
+      const messageValue = this.message.trim();
+      let result = true;
+
+      if (!nameValue) {
+        this.messageNotification('Enter a name');
         result = false;
+      } else if (!this.regexName(nameValue)) {
+        this.messageNotification('The "Name" field only accepts letters and spaces.');
+        result = false;
+      }
+      if (!emailValue) {
+          this.messageNotification('Enter an email');
+          result = false;
+      } else if (!this.isEmail(emailValue)) {
+          this.messageNotification('The "Mail" field contains an invalid format.');
+          result = false;
+      }
+      if (!messageValue) {
+        this.messageNotification('Enter a Message');
+        result = false;
+      } else if (!this.regexMessage(messageValue)) {
+          this.messageNotification('The "Message" field only accepts letters and spaces.');
+          result = false;
+      }
+      return result;
     }
-    else if (!messageValue) {
-      this.messageNotification('Ingrese un Mensaje');
-      result = false;
+    private messageNotification(message: string) {
+      const small: HTMLElement | null  = document.querySelector('small') ;
+      small!.innerHTML = message;
+      setTimeout(() => {small!.innerText = ""; }, 5000);
     }
-    else if(nameValue && emailValue && messageValue) {
-      this.messageNotification('Tu mensaje ha sido enviado correctamente');
-      setSuccess(true);
+    private regexName(name: string): boolean {
+      return /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/.test(name);
     }
-    return result;
-  }
-  public messageNotification(message: string) {
-    const small: HTMLElement | null  = document.querySelector('small') ;
-    small!.innerHTML = message;
-    setTimeout(() => {small!.innerText = ""; }, 5000);
-  }
-  private isEmail(email: string): boolean {
-    return /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(email);
-  }
-}
-let check = new Check(input.name, input.email, input.message);
+    private isEmail(email: string): boolean {
+      return /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(email);
+    }
+    private regexMessage(message: string): boolean {
+      return /^.{1,255}$/.test(message);
+    }
+    protected onSubmit: FormEventHandler<HTMLFormElement> | undefined = async (event) =>  {
+      event.preventDefault();
+      try {
+        if(this.validate()) {
+          axios.defaults.headers.post['Content-Type'] = 'application/json';
+          await axios.post('https://formsubmit.co/ajax/chendodev@gmail.com', {
+            name: this.name,
+            email: this.email,
+            message: this.message
+          })
+          setSuccess(true)
+          this.messageNotification('Tu mensaje ha sido enviado correctamente');
+          setTimeout(() => {
+            window.location.href = 'https://chendo.dev'
+          }, 3000);
+        } else {
+          setSuccess(false)
+          throw new Error("Error from send email");
+        }
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    protected onChange: ChangeEventHandler<HTMLInputElement> = (event) => {
+      const { name, value } = event.target;
 
-  const handleChange: ChangeEventHandler<HTMLInputElement> = ({ target }) => {
-    const value = target.value;
-    setInput({
-      ...input,
-      [target.name]: value
-    });
-  }
-  const onSubmit: MouseEventHandler<HTMLButtonElement> = async (event) =>  {
-    // Validating input data
-    event.preventDefault();
-    try {
-      !check.validate()
-      ? (check.validate(), setSuccess(false))
-      : (setInput({name: "", email: "", message: ""}));
-    } catch (error) {
-      console.log(error)
+      setInput({
+        ...input,
+        [name]: value
+      })
     }
+
   }
+  const { name, email, message } = input;
+  let check = new Check(name, email, message);
 
   const valueContext = {
     setMenuBtn,
     menuBtn,
-    input,
-    state,
+    setInput,
     success,
-    onSubmit,
-    handleSubmit,
-    handleChange,
+    check,
+    name,
+    email,
+    message
   }
 
   return (
@@ -102,5 +126,3 @@ let check = new Check(input.name, input.email, input.message);
 }
 
 export {GlobalProvider};
-
-

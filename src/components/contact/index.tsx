@@ -1,14 +1,13 @@
 import React from "react";
-import { getBrowser } from '@utils/check';
 import { Bartitle } from "@components/Bartitle";
-import TelegramImage from '@images/telegram.svg';
+import TelegramImage from "@assets/telegram.svg";
 import { Form } from "./Form";
 
-const Contact = () => {
+const Contact = (): JSX.Element => {
   const contact = "Contacto";
 
   return(
-    <div onLoad={getBrowser} className="container-menu">
+    <div className="container-menu">
      <Bartitle textBar={contact} />
      <div className="grid-menu">
          <div className="col-md-12 pd-l">

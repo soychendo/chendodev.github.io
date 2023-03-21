@@ -1,14 +1,15 @@
 import React, { useContext } from "react";
-import { GlobalContext } from "../../../context/GlobalContext";
+import { GlobalContext } from "@context/GlobalContext";
+import { ContextProps } from "@context/types";
 import useMediaQuery from '@hooks/useMediaQuery';
-import Master from "@images/master.jpg";
-import Close from "../Close";
-import { ContainerNav } from "../ContainerNav";
-import { MenuSocial } from "../MenuSocial";
+import Master from "@assets/master.jpg";
+import { MenuSocial } from "@components/header/MenuSocial";
+import { ContainerNav } from "@components/header/ContainerNav";
+import Close from "@components/header/Close";
 
-const Desktop = () => {
+const Desktop = (): JSX.Element => {
 
-  const { menuBtn } = useContext(GlobalContext);
+  const { menuBtn } = useContext<ContextProps>(GlobalContext);
   const matches = useMediaQuery("(max-width: 992px)");
 
   return(

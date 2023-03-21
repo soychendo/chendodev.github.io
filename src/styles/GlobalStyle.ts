@@ -16,11 +16,11 @@ const GlobalStyle = createGlobalStyle`
     user-select: none;
   }
   ::selection {
-      background: $color;
+      background: #191919;
       color: #fff;
   }
   ::-moz-selection {
-      background: $color;
+      background: #191919;
       color: #fff;
   }
   html {

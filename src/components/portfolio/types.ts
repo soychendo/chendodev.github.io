@@ -1,4 +1,4 @@
-import { DataBase } from "@/database/database.model"
+import { DataBase } from "@database/database.model"
 import type { HTMLAttributes } from "react";
 
 export type CardProps ={

@@ -73,21 +73,29 @@ input:-webkit-autofill { -webkit-text-fill-color: rgb(255, 255, 255);}
     flex-direction: column;
 }
 input, textarea {
-    font-size: 1.2em;
+    font-size: 1rem;
     font-family: $font-second;
-    padding: .5em 0 .5em 0;
+    padding: .5rem;
     margin: .1em;
-    color: $color-three;
+    color: #fff;
     background-color: transparent;
     outline: none;
+    user-select: contain;
     border: none;
     border-bottom: 1px solid $color;
+    margin-bottom: 2rem;
 }
 textarea {
     max-width: 100%;
     min-width: 100%;
     overflow: hidden;
     resize: none;
+    height: 150px !important;
+}
+@media (max-width: 768px) {
+    textarea {
+      height: 80px;
+  }
 }
 .cont-form .btn {
     width: 7rem;
@@ -98,6 +106,13 @@ textarea {
 /*<-------Form Control-------->*/
 .form-control {
 	position: relative;
+  display: flex;
+  gap: 1rem;
+}
+@media (max-width: 768px) {
+  .form-control {
+    flex-direction: column;
+  }
 }
 .form-control input {
 	outline: 1px solid $body;
@@ -127,7 +142,7 @@ textarea {
   display: flex;
   justify-content: space-between;
 }
-.messageAndSubmit small {
+#form small {
   font-size: 1em;
   color: $error;
   padding: 1em 0 0 0;

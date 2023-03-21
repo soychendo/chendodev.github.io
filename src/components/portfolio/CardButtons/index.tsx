@@ -1,6 +1,6 @@
 
 import React from "react";
-import { TouchableAnchor } from "../../../components/Anchor";
+import { TouchableAnchor } from "@components/Anchor";
 import { CardProps } from "../types";
 
 const CardButtons = ( { data }: CardProps ): JSX.Element => {

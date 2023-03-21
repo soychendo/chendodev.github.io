@@ -1,8 +1,8 @@
-import useMediaQuery from "../../../hooks/useMediaQuery";
-import { MobileNav } from "./Mobile";
-import { Desktop } from './Desktop'
+import useMediaQuery from "@hooks/useMediaQuery";
+import { MobileNav } from "@componentsheader/Mobile";
+import { Desktop } from '@componentsheader/Desktop'
 
-const Header = () => {
+const Header = (): JSX.Element => {
 
   const matches = useMediaQuery("(min-width: 480px)");
 

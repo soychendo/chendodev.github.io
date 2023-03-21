@@ -1,5 +1,5 @@
 // @ts-ignore
-import { DataBase } from 'database/database.model';
+import { DataBase } from '@database/database.model';
 
 export const database: DataBase[] = [
   {

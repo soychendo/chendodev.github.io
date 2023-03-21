@@ -1,7 +1,7 @@
 import React from "react"
 import { Bartitle } from "@components/Bartitle";
 
-const About = () => {
+const About = (): JSX.Element => {
 
   const about = "Sobre Mi";
 

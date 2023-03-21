@@ -8,7 +8,7 @@ import {
   CardDescription,
   CardButtons
 } from './styles'
-import { database } from "database/database";
+import { database } from "@database/database";
 
 export const skeleton: Array<number> = []
   for(let i = 1; i <= database.length; i++)
