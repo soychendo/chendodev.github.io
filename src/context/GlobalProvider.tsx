@@ -16,6 +16,7 @@ const GlobalProvider = ({children}: GlobalProviderTypes ) => {
   const [menuBtn, setMenuBtn] = useState(false);
   const [input, setInput] = useState<ContactForm>(initialState);
   const [success, setSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   class Check {
 
@@ -60,7 +61,7 @@ const GlobalProvider = ({children}: GlobalProviderTypes ) => {
     private messageNotification(message: string) {
       const small: HTMLElement | null  = document.querySelector('small') ;
       small!.innerHTML = message;
-      setTimeout(() => {small!.innerText = ""; }, 5000);
+      setTimeout(() => {small!.innerText = ""; }, 3000);
     }
     private regexName(name: string): boolean {
       return /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/.test(name);
@@ -75,6 +76,7 @@ const GlobalProvider = ({children}: GlobalProviderTypes ) => {
       event.preventDefault();
       try {
         if(this.validate()) {
+          setLoading(true)
           axios.defaults.headers.post['Content-Type'] = 'application/json';
           await axios.post('https://formsubmit.co/ajax/chendodev@gmail.com', {
             name: this.name,
@@ -83,6 +85,7 @@ const GlobalProvider = ({children}: GlobalProviderTypes ) => {
           })
           setSuccess(true)
           this.messageNotification('Tu mensaje ha sido enviado correctamente');
+          setLoading(false)
           setTimeout(() => {
             window.location.href = 'https://chendo.dev'
           }, 3000);
@@ -112,6 +115,7 @@ const GlobalProvider = ({children}: GlobalProviderTypes ) => {
     menuBtn,
     setInput,
     success,
+    loading,
     check,
     name,
     email,

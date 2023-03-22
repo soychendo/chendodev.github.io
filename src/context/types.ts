@@ -21,6 +21,7 @@ export type ContextProps = {
   email: string;
   message: string;
   success: boolean;
+  loading: boolean;
   check: InstanceType
   setMenuBtn: React.Dispatch<React.SetStateAction<boolean>>;
   handleClose: React.Dispatch<React.SetStateAction<boolean>>;

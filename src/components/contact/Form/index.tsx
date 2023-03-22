@@ -3,19 +3,22 @@ import { GlobalContext } from "@context/GlobalContext";
 import { getBrowser } from '@utils/check';
 import { ContextProps } from "@context/types";
 import { Input } from "@components/contact/Input";
+import { Button } from "@components/contact/Button";
+import Gif from '@assets/loading.gif'
 
 export const Form = () => {
-  const { success, check, name, email, message } = useContext<ContextProps>(GlobalContext);
+  const { success, check, name, email, message, loading } = useContext<ContextProps>(GlobalContext);
+  const { onSubmit, onChange } = check;
 
   return (
-    <form onSubmit={check.onSubmit} onLoad={getBrowser} method="POST" id="form">
-      <textarea name="message" value={message} onChange={check.onChange} placeholder="Mensaje"></textarea>
+    <form onSubmit={onSubmit} onLoad={getBrowser} method="POST" id="form">
+      <textarea name="message" value={message} onChange={onChange} placeholder="Mensaje"></textarea>
       <div className="form-control" >
         <Input  name="name" value={name} place="Nombre" />
         <Input  name="email" value={email} place="Email" />
       </div>
       <div className="messageAndSubmit">
-        <button type="submit" className="btn btn-chendo btn-block mb-4">Enviar</button>
+        <Button loading={loading} Gif={Gif} />
       </div>
       <small className={success ? "succes" : ""}></small>
     </form>
