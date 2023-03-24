@@ -7,6 +7,36 @@ export const database: DataBase[] = [
       {
         name: "Html",
         stack: "assets/html.png",
+        docs: "https://developer.mozilla.org/en-US/docs/Web/HTML"
+      },
+      {
+        name: "Sass",
+        stack: "assets/sass.png",
+        docs: "https://sass-lang.com/documentation/"
+      },
+      {
+        name: "ReactJs",
+        stack: "assets/reactjs.webp",
+        docs: "https://reactjs.org/docs/getting-started.html"
+      },
+      {
+        name: "TypeScript",
+        stack: "assets/typescript.png",
+        docs: "https://www.typescriptlang.org/docs/",
+      }
+    ],
+    title: "Windows",
+    description: "Esta vesión de windows está creada en React, pero también tiene una versión en PHP.",
+    image: "windows.jpg",
+    source: "https://github.com/chendodev/oschen",
+    demo: "https://chendo.dev/oschen",
+    id: 1
+  },
+  {
+    technologies: [
+      {
+        name: "Html",
+        stack: "assets/html.png",
         docs: "https://developer.mozilla.org/en-US/docs/Web/HTML",
       },
       {
@@ -25,7 +55,7 @@ export const database: DataBase[] = [
     image: "audioseven.jpg",
     source: "https://github.com/chendodev/audioseven",
     demo: "https://chendo.dev/audioseven/",
-    id: 1
+    id: 2
   },
   {
     technologies: [
@@ -55,36 +85,6 @@ export const database: DataBase[] = [
     image: "enchufevirtual.jpg",
     source: "https://github.com/orgs/enchufevirtual/repositories",
     demo: "https://enchufevirtual.com/",
-    id: 2
-  },
-  {
-    technologies: [
-      {
-        name: "Html",
-        stack: "assets/html.png",
-        docs: "https://developer.mozilla.org/en-US/docs/Web/HTML"
-      },
-      {
-        name: "Sass",
-        stack: "assets/sass.png",
-        docs: "https://sass-lang.com/documentation/"
-      },
-      {
-        name: "ReactJs",
-        stack: "assets/reactjs.webp",
-        docs: "https://reactjs.org/docs/getting-started.html"
-      },
-      {
-        name: "TypeScript",
-        stack: "assets/typescript.png",
-        docs: "https://www.typescriptlang.org/docs/",
-      }
-    ],
-    title: "Windows",
-    description: "Esta vesión de windows está creada en React, pero también tiene una versión en PHP.",
-    image: "windows.jpg",
-    source: "https://github.com/chendodev/oschen",
-    demo: "https://chendo.dev/oschen",
     id: 3
   },
   {
@@ -130,11 +130,11 @@ export const database: DataBase[] = [
         docs: "https://developer.mozilla.org/es/docs/Web/JavaScript"
       }
     ],
-    title: "Space",
-    description: "Este es un proyecto basado en un desafío de FrontenMentor, Tiene Html, Css y JavaScript.",
-    image: "space.jpg",
-    source: "https://github.com/chendodev/Space-website",
-    demo: "https://space-chen.vercel.app/",
+    title: "Ace Search",
+    description: "Buscador de imágenes que usa la API de Pexels, creado en Html, Css y JavaScript.",
+    image: "buscador.jpg",
+    source: "https://github.com/chendodev/asi",
+    demo: "https://asi-one.vercel.app/",
     id: 5
   },
   {
@@ -180,11 +180,12 @@ export const database: DataBase[] = [
         docs: "https://developer.mozilla.org/es/docs/Web/JavaScript"
       }
     ],
-    title: "Ace Search",
-    description: "Buscador de imágenes que usa la API de Pexels, creado en Html, Css y JavaScript.",
-    image: "buscador.jpg",
-    source: "https://github.com/chendodev/asi",
-    demo: "https://asi-one.vercel.app/",
+    title: "Space",
+    description: "Este es un proyecto basado en un desafío de FrontenMentor, Tiene Html, Css y JavaScript.",
+    image: "space.jpg",
+    source: "https://github.com/chendodev/Space-website",
+    demo: "https://space-chen.vercel.app/",
     id: 7
-  }
+  },
+
 ]
