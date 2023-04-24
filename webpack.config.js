@@ -74,7 +74,11 @@ module.exports = {
                 {
                     from: path.resolve(__dirname, "src", "assets"),
                     to: "assets"
-                }
+                },
+                {
+                  from: path.resolve(__dirname, 'public', '404.html'),
+                  to: path.resolve(__dirname, 'build', '404.html'),
+                },
             ]
         })
     ],
