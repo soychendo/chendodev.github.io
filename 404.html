@@ -15,15 +15,10 @@
     <!-- links -->
     <!-- favicon -->
     <link rel="icon" href="https://chendo.dev/assets/favicon.png">
-    <script>
-      const path = window.location.pathname;
-      const url = window.location.origin + path;
-      fetch(url, {method: "HEAD"})
-        .then(response => {
-          if (response.status === 404) {
-            window.location.replace('/');
-          }
-        });
+    <script type="text/javascript">
+      let redirectUrl = window.location.href.replace(/\/$/, '');
+      redirectUrl = redirectUrl.replace(/\/(.*)/, '#/$1');
+      window.location.replace(redirectUrl);
     </script>
 </head>
 <body>
