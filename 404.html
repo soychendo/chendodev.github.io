@@ -15,18 +15,16 @@
     <!-- links -->
     <!-- favicon -->
     <link rel="icon" href="https://chendo.dev/assets/favicon.png">
-    <script type="text/javascript">
+    <script>
       const path = window.location.pathname;
-      const hashPath = window.location.hash.replace('#/', '');
-
-      if (path !== '/' && path.slice(-1) === '/') {
-        const newPath = path.slice(0, -1) + '#' + hashPath;
-        window.location.replace(newPath);
-      } else {
-        const newHashPath = hashPath === '' ? '' : '/' + hashPath;
-        window.location.replace('/#' + newHashPath);
-      }
-  </script>
+      const url = window.location.origin + path;
+      fetch(url, {method: "HEAD"})
+        .then(response => {
+          if (response.status === 404) {
+            window.location.replace('/');
+          }
+        });
+    </script>
 </head>
 <body>
 </body>
