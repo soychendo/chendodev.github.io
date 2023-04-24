@@ -16,10 +16,17 @@
     <!-- favicon -->
     <link rel="icon" href="https://chendo.dev/assets/favicon.png">
     <script type="text/javascript">
-      let redirectUrl = window.location.href.replace(/\/$/, '');
-      redirectUrl = redirectUrl.replace(/\/(.*)/, '#/$1');
-      window.location.replace(redirectUrl);
-    </script>
+      const path = window.location.pathname;
+      const hashPath = window.location.hash.replace('#/', '');
+
+      if (path !== '/' && path.slice(-1) === '/') {
+        const newPath = path.slice(0, -1) + '#' + hashPath;
+        window.location.replace(newPath);
+      } else {
+        const newHashPath = hashPath === '' ? '' : '/' + hashPath;
+        window.location.replace('/#' + newHashPath);
+      }
+  </script>
 </head>
 <body>
 </body>
