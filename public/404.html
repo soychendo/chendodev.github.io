@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
+    <!-- Property -->
+    <meta property="og:url" content="https://chendo.dev/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Developer - Freelancer" />
+    <meta property="og:description" content="Desarrollo y Estilo Responsivo: HTML5, CSS3, React, TypeScript, NodeJs, Express, Php, Sql, Poo, Mvc." />
+    <meta name="author" content="@chendodev" />
+    <!-- title -->
+    <title>Chendo | Dev - 404</title>
+    <!-- script -->
+    <!-- links -->
+    <!-- favicon -->
+    <link rel="icon" href="https://chendo.dev/assets/favicon.png">
+    <script>
+      const path = window.location.pathname;
+      const url = window.location.origin + path;
+      fetch(url, {method: "HEAD"})
+        .then(response => {
+          if (response.status === 404) {
+            window.location.replace('/');
+          }
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>
