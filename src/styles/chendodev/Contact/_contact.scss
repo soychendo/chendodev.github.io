@@ -7,17 +7,11 @@ input:-webkit-autofill:active {
     box-shadow: 0 0 0 30px rgb(19, 19, 19) inset !important; }
 input:-webkit-autofill { -webkit-text-fill-color: rgb(255, 255, 255);}
 /* color */
-@media (min-width: 375px) {
-    .container-contact, .cont-form {
-        padding: 1rem;
-    }
-}
-/*----content form----*/
 /*<------Contact----->*/
 @media (max-width: 575px) {
   .container-contact {
-      margin: .1em;
-      padding: .1em;
+    margin: .1em;
+    padding: .1em;
   }
 }
 .container-contact span {
@@ -63,10 +57,10 @@ input:-webkit-autofill { -webkit-text-fill-color: rgb(255, 255, 255);}
  margin: .54em;
 }
 .cont-form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
 }
 #form {
   display: flex;
@@ -90,7 +84,7 @@ textarea {
   min-width: 100%;
   overflow: hidden;
   resize: none;
-  height: 150px !important;
+  height: 200px !important;
   margin-bottom: 10px;
 }
 @media (max-width: 768px) {
@@ -99,10 +93,10 @@ textarea {
 }
 }
 .cont-form .btn {
-    width: 140px;
-    align-self: flex-end;
-    cursor: pointer;
-    margin: .7em .1em 0;
+  width: 140px;
+  align-self: flex-end;
+  cursor: pointer;
+  margin: .7em .1em 0;
 }
 /*<-------Form Control-------->*/
 .form-control {
@@ -152,6 +146,13 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #42d392;
+  border: none;
+  color: #191919;
+  &:hover {
+    background-color: #2ca36e;
+    color: #191919;
+  }
   &:disabled {
     opacity: .3;
   }
