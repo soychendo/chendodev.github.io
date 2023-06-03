@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
-    <!-- Property -->
-    <meta property="og:url" content="https://chendo.dev/" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="Developer - Freelancer" />
-    <meta property="og:description" content="Desarrollo y Estilo Responsivo: HTML5, CSS3, React, TypeScript, NodeJs, Express, Php, Sql, Poo, Mvc." />
-    <meta name="author" content="@chendodev" />
-    <!-- title -->
-    <title>Chendo | Dev - 404</title>
-    <!-- script -->
-    <!-- links -->
-    <!-- favicon -->
-    <link rel="icon" href="https://chendo.dev/assets/favicon.png">
-    <script>
-      const path = window.location.pathname;
-      const url = window.location.origin + path;
-      fetch(url, {method: "HEAD"})
-        .then(response => {
-          if (response.status === 404) {
-            window.location.replace('/');
-          }
-        });
-    </script>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Property -->
+  <meta property="og:url" content="https://chendo.dev/" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Developer - Freelancer" />
+  <meta property="og:description" content="Desarrollo y Estilo Responsivo: HTML5, CSS3, React, TypeScript, NodeJs, Express, Php, Sql, Poo, Mvc." />
+  <meta name="author" content="@chendodev" />
+  <!-- title -->
+  <title>Chendo | Dev - 404</title>
+  <!-- script -->
+  <!-- links -->
+  <!-- favicon -->
+  <link rel="icon" href="https://chendo.dev/assets/favicon.png">
+  <script type="text/javascript">
+    var pathSegmentsToKeep = 0;
+    var l = window.location;
+    l.replace(
+      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+      l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+      (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+      l.hash
+    );
+  </script>
 </head>
 <body>
 </body>

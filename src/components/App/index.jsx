@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { GlobalProvider } from '@context/GlobalProvider';
 import { GlobalStyle } from '@styles/GlobalStyle';
 
