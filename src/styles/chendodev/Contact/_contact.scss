@@ -83,7 +83,7 @@ input, textarea {
   user-select: contain;
   border: none;
   border-bottom: 1px solid $color;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 textarea {
   max-width: 100%;
@@ -113,6 +113,7 @@ textarea {
 @media (max-width: 768px) {
   .form-control {
     flex-direction: column;
+    gap: 0;
   }
 }
 .form-control input {
