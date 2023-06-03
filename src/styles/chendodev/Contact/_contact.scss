@@ -69,36 +69,37 @@ input:-webkit-autofill { -webkit-text-fill-color: rgb(255, 255, 255);}
     height: 100%;
 }
 #form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 input, textarea {
-    font-size: 1rem;
-    font-family: $font-second;
-    padding: .5rem;
-    margin: .1em;
-    color: #fff;
-    background-color: transparent;
-    outline: none;
-    user-select: contain;
-    border: none;
-    border-bottom: 1px solid $color;
-    margin-bottom: 2rem;
+  font-size: 1rem;
+  font-family: $font-second;
+  padding: .5rem;
+  margin: .1em;
+  color: #fff;
+  background-color: $color;
+  outline: none;
+  user-select: contain;
+  border: none;
+  border-bottom: 1px solid $color;
+  margin-bottom: 2rem;
 }
 textarea {
-    max-width: 100%;
-    min-width: 100%;
-    overflow: hidden;
-    resize: none;
-    height: 150px !important;
+  max-width: 100%;
+  min-width: 100%;
+  overflow: hidden;
+  resize: none;
+  height: 150px !important;
+  margin-bottom: 10px;
 }
 @media (max-width: 768px) {
-    textarea {
-      height: 80px;
-  }
+  textarea {
+    height: 80px;
+}
 }
 .cont-form .btn {
-    width: 7rem;
+    width: 140px;
     align-self: flex-end;
     cursor: pointer;
     margin: .7em .1em 0;
@@ -140,7 +141,7 @@ textarea {
 }
 .messageAndSubmit {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 .messageAndSubmit img {
   width: 25px;
@@ -157,7 +158,7 @@ textarea {
 #form small {
   font-size: 1em;
   color: $error;
-  padding: 1em 0 0 0;
+  padding-bottom: 1rem;
 }
 .succes {
   color: $succes !important;

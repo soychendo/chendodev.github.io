@@ -12,15 +12,15 @@ export const Form = () => {
 
   return (
     <form onSubmit={onSubmit} onLoad={getBrowser} method="POST" id="form">
-      <textarea name="message" value={message} onChange={onChange} placeholder="Mensaje"></textarea>
+      <small className={success ? "succes" : ""}></small>
       <div className="form-control" >
         <Input  name="name" value={name} place="Nombre" />
         <Input  name="email" value={email} place="Email" />
       </div>
+      <textarea name="message" value={message} onChange={onChange} placeholder="Mensaje"></textarea>
       <div className="messageAndSubmit">
         <Button loading={loading} Gif={Gif} />
       </div>
-      <small className={success ? "succes" : ""}></small>
     </form>
   )
 }

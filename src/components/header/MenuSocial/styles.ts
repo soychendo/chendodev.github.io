@@ -4,6 +4,7 @@ export const MenuSocialDiv = styled.div`
 
   a {
     margin: .3vmax;
+    cursor: pointer !important;
     i {
       color: #555;
       font-size: 1.5vmax;
