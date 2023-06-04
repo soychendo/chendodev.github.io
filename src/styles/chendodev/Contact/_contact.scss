@@ -59,8 +59,13 @@ input:-webkit-autofill { -webkit-text-fill-color: rgb(255, 255, 255);}
 .cont-form {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 570px;
   height: 100%;
+}
+@media (max-width: 604px) {
+  .cont-form {
+    width: 100%;
+  }
 }
 #form {
   display: flex;
