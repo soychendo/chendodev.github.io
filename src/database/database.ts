@@ -5,6 +5,26 @@ export const database: DataBase[] = [
   {
     technologies: [
       {
+        name: "TypeScript",
+        stack: "assets/typescript.png",
+        docs: "https://www.typescriptlang.org/docs/",
+      },
+      {
+        name: "ReactJs",
+        stack: "assets/reactjs.webp",
+        docs: "https://reactjs.org/docs/getting-started.html"
+      }
+    ],
+    title: "Radio Ev",
+    description: "Este proyecto Open Source es una aplicación para disfrutar de la mejor música del momento y conectar con personas de diferentes partes del mundo a través de un chat integrado.",
+    image: "radioev.jpg",
+    source: "https://github.com/orgs/enchufevirtual/repositories",
+    demo: "https://radio.enchufevirtual.com",
+    id: 1
+  },
+  {
+    technologies: [
+      {
         name: "Html",
         stack: "assets/html.png",
         docs: "https://developer.mozilla.org/en-US/docs/Web/HTML"
@@ -26,11 +46,11 @@ export const database: DataBase[] = [
       }
     ],
     title: "Windows",
-    description: "Esta vesión de windows está creada en React, pero también tiene una versión en PHP.",
+    description: "Esta versión de windows está creada en React, pero también tiene una versión en PHP.",
     image: "windows.jpg",
     source: "https://github.com/chendodev/oschen",
     demo: "https://chendo.dev/oschen",
-    id: 1
+    id: 2
   },
   {
     technologies: [
@@ -55,7 +75,7 @@ export const database: DataBase[] = [
     image: "audioseven.jpg",
     source: "https://github.com/chendodev/audioseven",
     demo: "https://chendo.dev/audioseven/",
-    id: 2
+    id: 3
   },
   {
     technologies: [
@@ -85,7 +105,7 @@ export const database: DataBase[] = [
     image: "enchufevirtual.jpg",
     source: "https://github.com/orgs/enchufevirtual/repositories",
     demo: "https://enchufevirtual.com/",
-    id: 3
+    id: 4
   },
   {
     technologies: [
@@ -110,7 +130,7 @@ export const database: DataBase[] = [
     image: "chendocalc.jpg",
     source: "https://github.com/chendodev/chendocalc",
     demo: "https://chendo.dev/chendocalc",
-    id: 4
+    id: 5
   },
   {
     technologies: [
@@ -135,7 +155,7 @@ export const database: DataBase[] = [
     image: "buscador.jpg",
     source: "https://github.com/chendodev/asi",
     demo: "https://asi-one.vercel.app/",
-    id: 5
+    id: 6
   },
   {
     technologies: [
@@ -160,7 +180,7 @@ export const database: DataBase[] = [
     image: "devaechba.jpg",
     source: "https://github.com/chendodev",
     demo: "https://github.com/chendodev",
-    id: 6
+    id: 7
   },
   {
     technologies: [
@@ -185,7 +205,7 @@ export const database: DataBase[] = [
     image: "space.jpg",
     source: "https://github.com/chendodev/Space-website",
     demo: "https://space-chen.vercel.app/",
-    id: 7
+    id: 8
   },
 
 ]
