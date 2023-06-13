@@ -7,7 +7,7 @@ const CardBody = ({ data }: CardProps): JSX.Element => {
   return (
     <CardBodyContainer>
       <h2>{data.title}</h2>
-      <p>{data.description}</p>
+      <p>{data.description.substring(0, 100) + "..."}</p>
     </CardBodyContainer>
   );
 }
