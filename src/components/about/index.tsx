@@ -36,20 +36,19 @@ const About = (): JSX.Element => {
           <span>Habilidades:</span>
           <div className="skill__separate">
             <ul className="mb-4">
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>Sass/Less</li>
-                <li>Webpack</li>
-                <li>Git/Github</li>
-                <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>React</li>
+              <li>Webpack</li>
+              <li>Git/Github</li>
+              <li>Sass</li>
+              <li>Styled Components</li>
             </ul>
             <ul className="skills mb-4">
-                <li>React</li>
-                <li>NodeJs</li>
-                <li>Express</li>
-                <li>PHP</li>
-                <li>MySQL</li>
-                <li>SQL</li>
+              <li>NodeJs</li>
+              <li>Express</li>
+              <li>PHP</li>
+              <li>MySQL</li>
+              <li>SQL</li>
             </ul>
           </div>
           <span>Patrones y Técnicas</span>
