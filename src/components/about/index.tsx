@@ -12,7 +12,7 @@ const About = (): JSX.Element => {
       <div className="col-md-6 pd-l">
           <div className="col-content">
             <span>Hola!</span>
-            <p>Soy chendo, Diseñador Gráfico, Desarrollador Web, Motivador & Especialista en Presencia Online.</p>
+            <p>Soy chendo, Full Stack Developer, Motivador & Especialista en Presencia Online.</p>
             <p>Durante varios años me dedicaba a la creación de diseños para Windows. Dar solución a problemas de sistemas informáticos, hardware y software.</p>
             <p>En el 2009, los sitios web comenzaron a llamarme la atención. que incluso pude crear mi primer sitio web, con html y css.</p><p>&nbsp;</p>
             <p><i>"Cuando algo realmente te apasiona. encuentras la manera de llevarlo acabo, sin importar cuanto tiempo te tarde."</i></p>
@@ -36,20 +36,19 @@ const About = (): JSX.Element => {
           <span>Habilidades:</span>
           <div className="skill__separate">
             <ul className="mb-4">
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>Sass/Less</li>
-                <li>Webpack</li>
-                <li>Git/Github</li>
-                <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>React</li>
+              <li>Webpack</li>
+              <li>Git/Github</li>
+              <li>Sass</li>
+              <li>Styled Components</li>
             </ul>
             <ul className="skills mb-4">
-                <li>React</li>
-                <li>NodeJs</li>
-                <li>Express</li>
-                <li>PHP</li>
-                <li>MySQL</li>
-                <li>SQL</li>
+              <li>NodeJs</li>
+              <li>Express</li>
+              <li>PHP</li>
+              <li>MySQL</li>
+              <li>SQL</li>
             </ul>
           </div>
           <span>Patrones y Técnicas</span>
