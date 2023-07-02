@@ -204,7 +204,7 @@ export const database: DataBase[] = [
     description: "Este es un proyecto basado en un desafío de FrontenMentor, Tiene Html, Css y JavaScript.",
     image: "space.jpg",
     source: "https://github.com/chendodev/Space-website",
-    demo: "https://space-chen.vercel.app/",
+    demo: "https://github.com/chendodev/",
     id: 8
   },
 
