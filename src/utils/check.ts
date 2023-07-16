@@ -11,11 +11,13 @@
 -----------------------------------------------------------------------------------*/
 // check
 const getBrowser = () => {
-    let ieCheck = /Edg/.test(navigator.userAgent);
+  let ieCheck = /Edg/.test(navigator.userAgent);
 
-       ieCheck
-       ? document.querySelectorAll('input').forEach( input => input.setAttribute('autoComplete', 'nope'))
-       : null;
-}
+  ieCheck
+    ? document
+        .querySelectorAll('input')
+        .forEach((input) => input.setAttribute('autoComplete', 'nope'))
+    : null;
+};
 
 export { getBrowser };

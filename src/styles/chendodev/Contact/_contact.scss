@@ -171,3 +171,8 @@ textarea {
 .succes {
   color: $succes !important;
 }
+
+input:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px hsla(160, 100%, 50%, 80%);
+}
