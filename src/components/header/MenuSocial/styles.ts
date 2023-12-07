@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const MenuSocialDiv = styled.div`
 
+  text-align: center;
+
   a {
     margin: .3vmax;
     cursor: pointer !important;

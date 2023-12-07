@@ -27,7 +27,7 @@ const SocialMedia = () => {
           </div>
           <div className="content-bottom-icon mb-4">
             <div className="cirdown">
-              <a href="https://tiktok.com/@chendodev" aria-label="tiktok" target="_blank"><i className="fab fa-tiktok icono"></i></a>
+              <a href="https://tiktok.com/@chendodiesel" aria-label="tiktok" target="_blank"><i className="fab fa-tiktok icono"></i></a>
             </div>
             <div className="cirdown">
               <a href="https://codepen.io/chendodev" aria-label="codepen" target="_blank"><i className="fab fa-codepen icono"></i></a>
