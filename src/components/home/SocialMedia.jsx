@@ -16,7 +16,7 @@ const SocialMedia = () => {
           </div>
           <div className="content-med-icon">
             <div className="cirdown">
-              <a href="https://twitter.com/chendodev" aria-label="twitter" target="_blank"><i className="fab fa-twitter icono"></i></a>
+              <a href="https://twitter.com/chendodiesel" aria-label="twitter" target="_blank"><i className="fab fa-twitter icono"></i></a>
             </div>
             <div className="cirdown">
               <a href="https://github.com/chendodev" aria-label="github" target="_blank"><i className="fab fa-github-alt icono"></i></a>
