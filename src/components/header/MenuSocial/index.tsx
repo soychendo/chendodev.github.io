@@ -15,7 +15,7 @@ const MenuSocial = (): JSX.Element => {
     <MenuSocialDiv className="menu-social">
       <div>
         <a href="https://www.youtube.com/@chendodiesel" aria-label="youtube" target="_blank"><i className="fab fa-youtube"></i></a>
-        <a href="https://www.facebook.com/chendodiesels" aria-label="facebook" target="_blank"><i className="fab fa-facebook-f"></i></a>
+        <a href="https://www.facebook.com/soychendo" aria-label="facebook" target="_blank"><i className="fab fa-facebook-f"></i></a>
         <a href="https://www.instagram.com/chendodiesel" aria-label="instagram" target="_blank"><i className="fab fa-instagram"></i></a>
       </div>
       <footer>Copyright @ {date}</footer>
